@@ -1,0 +1,146 @@
+﻿@model NDIS.Entities.AddSupportItemPriceListParams
+
+@{
+    ViewData["Title"] = "AddPrices";
+    Layout = "~/Areas/Company/Views/Shared/_Layout.cshtml";
+}
+
+<main id="main-container">
+
+    <div class="content">
+        <div class="block block-rounded">
+            <div class="block-header block-header-default">
+                <h3 class="block-title">Add Support Item Price</h3>
+            </div>
+            <div class="block-content">
+                <form asp-action="AddPrices" asp-controller="Settings" method="POST">
+                    @* <h2 class="content-heading pt-0">Basic</h2> *@
+                    <div  asp-validation-summary="All" class="invalid-feedback animated"></div>
+                    <div class="row push">
+                        @Html.HiddenFor(a => a.SupportItemPriceListId)
+
+
+                        <div class="col-lg-12 col-xl-6" id="divSupportCategoryId">
+                            <div class="mb-4">
+                                <label class="form-label" for="example-text-input">Support Item Category <span class="text-danger">*</span></label>
+                                <select class="form-select" id="SupportCategoryId" name="SupportCategoryId">
+                                    @foreach (var i in @Model.SupportCategories)
+                                    {
+                                        <option value="@i.SupportCategoryId">@i.SupportCategoryName</option>
+                                    }
+                                </select>
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-xl-6" id="divSupportItemId">
+                            <label class="form-label" for="example-text-input">Support Item  <span class="text-danger">*</span></label>
+
+                            <select class="form-select" asp-for="SupportItemId" id="SupportItemId" name="SupportItemId">
+                                <option value="0">Select Item</option>
+                            </select>
+                            <span asp-validation-for="SupportItemId" class="text-danger"></span>
+                        </div>
+                        <div class="col-lg-12 col-xl-6" id="divSupportItemName" style="display:none">
+                            <label class="form-label" for="example-text-input">Support Item  <span class="text-danger">*</span></label>
+                            <br />
+                            <label class="form-label" for="example-text-input">@Model.SupportItemName<span class="text-danger"></span></label>
+                            </div>
+                        <div class="col-lg-12 col-xl-6">
+                            <div class="mb-4">
+                                <label class="form-label"  for="val-skill">State <span class="text-danger">*</span></label>
+                                <select class="form-select" asp-for="StateId" id="StateId" name="StateId">
+                                    @foreach (var i in @Model.States)
+                                    {
+                                        <option value="@i.StateId">@i.StateName</option>
+                                    }
+                                </select>
+                                <span asp-validation-for="StateId" class="text-danger"></span>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-xl-6">
+                            <div class="mb-4">
+                                <label class="form-label" for="example-text-input">Price <span class="text-danger">*</span></label>
+                                <input type="text" asp-for="Price" class="form-control"  id="Price" name="Price" placeholder="Enter Support Item Name">
+                                <span asp-validation-for="Price" class="text-danger"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-12 col-md-6">
+                            <label class="form-label" for="val-skill">Status </label>
+                            <select class="form-select" asp-for="Status" id="Status" name="Status" fdprocessedid="xkq1ao" aria-describedby="val-skill-error" aria-invalid="true">
+                                <option value="1">Active</option>
+                                <option value="0">Inactive</option>
+                            </select>
+
+                        </div>
+
+                        <div class="col-sm-12 col-md-6">
+                            <button type="submit" id="savebtn" class="btn btn-primary ">Save</button>
+                            <a href="/company/settings/Prices" id="cnlbtn" class="btn btn-warning">Cancel</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+<script>
+    $(() => {
+
+        
+        $("#Status").val(@Model.Status);
+        $("#Price").val(@Model.Price);
+        $("#StateId").val(@Model.StateId);
+        $("#SupportCategoryId").val(@Model.SupportCategoryId);
+
+        if ($("#SupportCategoryId").val()> 0) {
+            $("#divSupportCategoryId").hide();
+            $("#divSupportItemId").hide();
+            $("#divSupportItemName").show();
+
+            //BindItems($("#SupportCategoryId").val());
+        }
+
+        $(document).on('change', '#SupportCategoryId', function (event) {
+
+            var id = $(this).val();
+            BindItems(id);
+            // alert(selectedValue)
+        });
+
+        function BindItems(id) {
+            gl.ajaxreqloader(apiurl + "Client/GetddlNASupportItemBySCId", "GET", { id: id }, function (response) {
+                //console.log(response);
+                $('#SupportItemId').empty();
+                if (response.length > 0) {
+                    $('#SupportItemId').append($('<option>', {
+                        value: 0,
+                        text: "Select Support Item."
+                    }));
+                    $.each(response, function (i, item) {
+
+                        $('#SupportItemId').append($('<option>', {
+                            value: item.supportItemId,
+                            text: item.supportItemNumber + '--' + item.supportItemName
+                        }));
+                        
+                    });
+                }
+                else {
+                    $('#SupportItemId').append($('<option>', {
+                        value: 0,
+                        text: "No items"
+                    }));
+                }
+            });
+        }
+
+        
+
+
+    });
+    $(() => {
+        $('#SupportItemId').val(@Model.SupportItemId)
+    });
+</script>

@@ -1,0 +1,137 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model NDIS.Entities.AddClientSupportItem
+@{
+    ViewData["Title"] = "AddBudgetItem";
+    Layout = "~/Areas/Company/Views/Shared/_Layout.cshtml";
+}
+
+<main id="main-container">
+
+    <div class="content">
+        <div class="block block-rounded">
+            <div class="block-header block-header-default">
+                <h3 class="block-title">Add Participant Budget Item</h3>
+            </div>
+            <div class="block-content">
+                <form asp-action="AddBudget"  method="POST">
+                    @* <h2 class="content-heading pt-0">Basic</h2> *@
+                    @* <div  asp-validation-summary="All" class="invalid-feedback animated"></div> *@
+                    <div class="row push">
+                        @Html.HiddenFor(a => a.ClientBudgetId, new { id = "ClientBudgetId" })
+                        @Html.HiddenFor(a => a.CompanyId, new { id = "CompanyId" })
+                        @Html.HiddenFor(a => a.StateId, new { id = "StateId" })
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label" for="example-text-input">Participant Budget No <span class="text-danger">:</span></label>
+                        <label class="form-label" for="example-text-input">@Model.ClientBudgetId </label>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label" for="example-text-input">State <span class="text-danger">:</span></label>
+                        <label class="form-label" for="example-text-input">@Model.StateName </label>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label" for="example-text-input">Proposed Budget <span class="text-danger">:</span></label>
+                        <label class="form-label" name="ProposedBudget" id="ProposedBudget"> @Model.ProposedBudgetStr</label>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label" for="example-text-input">Used Budget <span class="text-danger">:</span></label>
+                        <label class="form-label" name="UsedBudget" id="UsedBudget"> @Model.UsedBudgetStr</label>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label" for="example-text-input">Remaining Budget <span class="text-danger">:</span></label>
+                        <label class="form-label" name="RemainingBudget" id="RemainingBudget"> @Model.RemainingBudgetStr</label>
+                    </div>
+                </form>
+            </div>
+            <div class="block-header block-header-default">
+                <h3 class="block-title">Added Budget Support Items</h3>
+            </div>
+            <div class="block-content">
+                <div class="block block-rounded">
+                    <div class="block-header block-header-default">
+                        <div class="col-sm-12 col-md-6" style="display:none;">
+                            @* <label class="form-label" for="example-text-input">Search</label> *@
+                            <input type="text" class="form-control Searchstr" id="SearchStr" name="Search" placeholder="Search">
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <select class="form-select" id="SupportCategoryId" name="SupportCategoryId" asp-items="@(new SelectList(Model.SupportCategories,"SupportCategoryId","SupportCategoryName"))">
+                            </select>
+                        </div>
+                            <button type="button" id="shwbtn" class="btn btn-primary ">Search</button>
+                            <button type="button" id="shwallbtn" class="btn btn-primary ">Show all</button>
+                            <button type="button" id="back" class="btn btn-primary ">Go Back</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-4 pull-right">
+                            Total: <span id="totalrec"></span>
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                            <div id="showpageinfo" class="col-auto">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4 pull-left">
+                            <select class="form-select" id="ddlpagesize">
+                                <option>25</option>
+                                <option>50</option>
+                                <option>75</option>
+                                <option>100</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="block-content block-content-full">
+                        <div id="DataTables_Table_3_wrapper" class="dataTables_wrapper dt-bootstrap5 no-footer">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <table class="table clientsDatatable" id="tbldata1" aria-describedby="DataTables_Table_3_info">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    SL No.
+                                                </th>
+                                            <th>
+                                                Support Item Id
+                                            </th>
+                                                <th>
+                                                    Support Item No
+                                                </th>
+                                                <th>
+                                                    Support Item Name
+                                                </th>
+                                               
+                                                <th>
+                                                    Item Budget
+                                                </th>
+                                                
+                                                <th>
+                                                    Actions
+                                                </th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody id="tbldata">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="px-2 my-2 pull-right">
+                                    <ul class="pagination m-0">
+                                        <li class="active"><a href="#"><i class="fas fa-angle-double-left"></i></a></li>
+                                        <li><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#"><i class="fas fa-angle-double-right"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="~/js/clientnasupportitem.js"></script>

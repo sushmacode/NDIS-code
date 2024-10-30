@@ -1,0 +1,5 @@
+2024-09-09 13:17:29.472 +05:00 [WRN] The WebRootPath was not found: C:\Users\Lenovo\OneDrive\Desktop\sushma project code\NDISBudget\NDISBudget\bin\Debug\net8.0\wwwroot. Static files may be unavailable.
+2024-09-09 13:18:05.836 +05:00 [WRN] The WebRootPath was not found: C:\Users\Lenovo\OneDrive\Desktop\sushma project code\NDISBudget\NDISBudget\bin\Debug\net8.0\wwwroot. Static files may be unavailable.
+2024-09-09 13:18:56.867 +05:00 [WRN] The WebRootPath was not found: C:\Users\Lenovo\OneDrive\Desktop\sushma project code\NDISBudget\NDISBudget\bin\Debug\net8.0\wwwroot. Static files may be unavailable.
+2024-09-09 13:19:48.572 +05:00 [WRN] The WebRootPath was not found: C:\Users\Lenovo\OneDrive\Desktop\sushma project code\NDISBudget\NDISBudget\bin\Debug\net8.0\wwwroot. Static files may be unavailable.
+2024-09-09 13:20:04.356 +05:00 [WRN] The WebRootPath was not found: C:\Users\Lenovo\OneDrive\Desktop\sushma project code\NDISBudget\NDISBudget\bin\Debug\net8.0\wwwroot. Static files may be unavailable.

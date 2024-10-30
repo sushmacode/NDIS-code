@@ -1,0 +1,359 @@
+2024-09-30 07:32:59.322 +05:00 [INF] HTTP GET / responded 200 in 5.6056 ms
+2024-09-30 07:32:59.356 +05:00 [INF] HTTP GET /css/font-awesome.css responded 404 in 0.6733 ms
+2024-09-30 07:33:00.853 +05:00 [INF] HTTP GET /Company/Account/Login responded 200 in 114.9282 ms
+2024-09-30 07:33:00.892 +05:00 [INF] HTTP GET /assets/js/plugins/jquery-validation/jquery.validate.min.js responded 404 in 5.7537 ms
+2024-09-30 07:33:00.910 +05:00 [INF] HTTP GET /assets/css/style.bundle.css responded 304 in 24.2895 ms
+2024-09-30 07:33:01.035 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.7251 ms
+2024-09-30 07:33:01.055 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.4140 ms
+2024-09-30 07:33:04.962 +05:00 [INF] HTTP POST /Company/Account/Login responded 302 in 2445.7592 ms
+2024-09-30 07:33:05.315 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 335.3082 ms
+2024-09-30 07:33:05.414 +05:00 [INF] HTTP GET /assets/media/photos/logo-minimize.png responded 304 in 2.0976 ms
+2024-09-30 07:33:05.672 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.6876 ms
+2024-09-30 07:33:05.680 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-regular-400.woff2 responded 404 in 0.8915 ms
+2024-09-30 07:33:06.243 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 1.1466 ms
+2024-09-30 07:33:06.243 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-regular-400.ttf responded 404 in 0.4575 ms
+2024-09-30 07:34:10.616 +05:00 [INF] HTTP GET / responded 200 in 277.3651 ms
+2024-09-30 07:34:10.670 +05:00 [INF] HTTP GET /css/font-awesome.css responded 404 in 8.4643 ms
+2024-09-30 07:34:12.505 +05:00 [ERR] HTTP GET /Admin/Home/Index responded 500 in 174.6606 ms
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot perform runtime binding on a null reference
+   at CallSite.Target(Closure, CallSite, Object)
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at AspNetCoreGeneratedDocument.Areas_Admin_Views_Home_Index.ExecuteAsync() in C:\Users\Lenovo\OneDrive\Desktop\sushma project code\NDISBudget\NDISBudget\Areas\Admin\Views\Home\Index.cshtml:line 4
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2024-09-30 07:34:12.552 +05:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot perform runtime binding on a null reference
+   at CallSite.Target(Closure, CallSite, Object)
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at AspNetCoreGeneratedDocument.Areas_Admin_Views_Home_Index.ExecuteAsync() in C:\Users\Lenovo\OneDrive\Desktop\sushma project code\NDISBudget\NDISBudget\Areas\Admin\Views\Home\Index.cshtml:line 4
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2024-09-30 07:34:12.572 +05:00 [INF] HTTP GET /Error responded 404 in 0.6205 ms
+2024-09-30 07:34:12.578 +05:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The exception handler configured on ExceptionHandlerOptions produced a 404 status response. This InvalidOperationException containing the original exception was thrown since this is often due to a misconfigured ExceptionHandlingPath. If the exception handler is expected to return 404 status responses then set AllowStatusCode404Response to true.
+ ---> Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot perform runtime binding on a null reference
+   at CallSite.Target(Closure, CallSite, Object)
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at AspNetCoreGeneratedDocument.Areas_Admin_Views_Home_Index.ExecuteAsync() in C:\Users\Lenovo\OneDrive\Desktop\sushma project code\NDISBudget\NDISBudget\Areas\Admin\Views\Home\Index.cshtml:line 4
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-30 07:34:50.132 +05:00 [INF] HTTP GET / responded 200 in 156.2387 ms
+2024-09-30 07:34:50.205 +05:00 [INF] HTTP GET /css/font-awesome.css responded 404 in 16.6353 ms
+2024-09-30 07:34:52.317 +05:00 [INF] HTTP GET /Admin/Home/Index responded 200 in 47.3450 ms
+2024-09-30 07:34:52.886 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 69.9304 ms
+2024-09-30 07:34:52.994 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.6643 ms
+2024-09-30 07:36:31.742 +05:00 [INF] HTTP GET / responded 200 in 5.2792 ms
+2024-09-30 07:36:31.799 +05:00 [INF] HTTP GET /css/font-awesome.css responded 404 in 0.4102 ms
+2024-09-30 07:36:33.397 +05:00 [INF] HTTP GET /Company/Account/Login responded 200 in 75.2419 ms
+2024-09-30 07:36:33.433 +05:00 [INF] HTTP GET /assets/js/plugins/jquery-validation/jquery.validate.min.js responded 404 in 1.2259 ms
+2024-09-30 07:36:33.551 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.5676 ms
+2024-09-30 07:36:33.569 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.3569 ms
+2024-09-30 07:36:36.386 +05:00 [INF] HTTP POST /Company/Account/Login responded 302 in 1870.9437 ms
+2024-09-30 07:36:36.672 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 271.9543 ms
+2024-09-30 07:36:36.803 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-regular-400.woff2 responded 404 in 0.4702 ms
+2024-09-30 07:36:36.803 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.4714 ms
+2024-09-30 07:36:36.815 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-regular-400.ttf responded 404 in 0.8219 ms
+2024-09-30 07:36:36.815 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.3327 ms
+2024-09-30 07:38:33.294 +05:00 [INF] HTTP GET / responded 200 in 112.8712 ms
+2024-09-30 07:38:33.331 +05:00 [INF] HTTP GET /css/font-awesome.css responded 404 in 4.0680 ms
+2024-09-30 07:38:35.543 +05:00 [INF] HTTP GET /assets/js/plugins/jquery-validation/jquery.validate.min.js responded 404 in 0.7763 ms
+2024-09-30 07:38:35.585 +05:00 [INF] HTTP GET /Company/Account/Login responded 200 in 184.4286 ms
+2024-09-30 07:38:35.707 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 1.3639 ms
+2024-09-30 07:38:35.727 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.7930 ms
+2024-09-30 07:38:37.559 +05:00 [INF] HTTP GET /Admin/Home/Index responded 200 in 226.8612 ms
+2024-09-30 07:38:37.727 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 1.1234 ms
+2024-09-30 07:38:37.763 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 2.3132 ms
+2024-09-30 07:38:53.437 +05:00 [INF] HTTP POST /Company/Account/Login responded 302 in 1778.0491 ms
+2024-09-30 07:38:53.763 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 290.6283 ms
+2024-09-30 07:38:53.899 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 1.3529 ms
+2024-09-30 07:38:53.899 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-regular-400.woff2 responded 404 in 1.3100 ms
+2024-09-30 07:38:53.916 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-regular-400.ttf responded 404 in 0.2348 ms
+2024-09-30 07:38:53.916 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.7135 ms
+2024-09-30 07:39:05.370 +05:00 [INF] HTTP GET /Company/Client/index responded 200 in 27.8232 ms
+2024-09-30 07:39:05.467 +05:00 [INF] HTTP GET /js/client.js responded 200 in 51.8177 ms
+2024-09-30 07:39:05.497 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.4629 ms
+2024-09-30 07:39:05.531 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.3978 ms
+2024-09-30 07:39:05.837 +05:00 [INF] HTTP POST /api/Client/GetAdminClientsList responded 200 in 276.5289 ms
+2024-09-30 07:42:30.841 +05:00 [INF] HTTP GET / responded 200 in 100.7792 ms
+2024-09-30 07:42:30.866 +05:00 [INF] HTTP GET /css/font-awesome.css responded 404 in 3.8913 ms
+2024-09-30 07:42:43.610 +05:00 [INF] HTTP GET /Admin/Home/Index responded 200 in 68.8814 ms
+2024-09-30 07:42:43.808 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.9699 ms
+2024-09-30 07:42:43.832 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 1.3070 ms
+2024-09-30 07:43:41.539 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-regular-400.woff2 responded 404 in 3.2021 ms
+2024-09-30 07:43:41.546 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-regular-400.ttf responded 404 in 0.3531 ms
+2024-09-30 07:44:02.738 +05:00 [INF] HTTP GET / responded 200 in 4.6560 ms
+2024-09-30 07:44:02.789 +05:00 [INF] HTTP GET /css/font-awesome.css responded 404 in 0.4784 ms
+2024-09-30 07:44:04.182 +05:00 [INF] HTTP GET /Company/Account/Login responded 200 in 73.6914 ms
+2024-09-30 07:44:04.242 +05:00 [INF] HTTP GET /assets/js/plugins/jquery-validation/jquery.validate.min.js responded 404 in 1.4281 ms
+2024-09-30 07:44:04.361 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.4530 ms
+2024-09-30 07:44:04.377 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.5785 ms
+2024-09-30 07:44:07.682 +05:00 [INF] HTTP POST /Company/Account/Login responded 302 in 1823.6255 ms
+2024-09-30 07:44:07.982 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 290.1062 ms
+2024-09-30 07:44:08.101 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 1.8340 ms
+2024-09-30 07:44:08.101 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-regular-400.woff2 responded 404 in 1.3563 ms
+2024-09-30 07:44:08.118 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.6637 ms
+2024-09-30 07:44:08.127 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-regular-400.ttf responded 404 in 1.0854 ms
+2024-09-30 07:44:11.000 +05:00 [INF] HTTP GET /Company/Client/index responded 200 in 21.5778 ms
+2024-09-30 07:44:11.102 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.6108 ms
+2024-09-30 07:44:11.129 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.4064 ms
+2024-09-30 07:44:11.409 +05:00 [INF] HTTP POST /api/Client/GetAdminClientsList responded 200 in 278.9293 ms
+2024-09-30 07:44:53.147 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 4.1400 ms
+2024-09-30 07:54:22.124 +05:00 [INF] HTTP GET / responded 200 in 129.1771 ms
+2024-09-30 07:54:22.182 +05:00 [INF] HTTP GET /css/font-awesome.css responded 404 in 14.3934 ms
+2024-09-30 07:54:24.222 +05:00 [INF] HTTP GET /Admin/Home/Index responded 200 in 41.1960 ms
+2024-09-30 07:54:24.434 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 1.4562 ms
+2024-09-30 07:54:24.447 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.5535 ms
+2024-09-30 08:00:09.382 +05:00 [INF] HTTP GET / responded 200 in 145.2073 ms
+2024-09-30 08:00:09.439 +05:00 [INF] HTTP GET /css/font-awesome.css responded 404 in 9.6705 ms
+2024-09-30 08:00:11.087 +05:00 [INF] HTTP GET /Admin/Home/Index responded 200 in 53.6525 ms
+2024-09-30 08:00:11.350 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.8368 ms
+2024-09-30 08:00:11.367 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.7118 ms
+2024-09-30 08:02:35.375 +05:00 [INF] HTTP GET / responded 200 in 217.0639 ms
+2024-09-30 08:02:35.435 +05:00 [INF] HTTP GET /css/font-awesome.css responded 404 in 14.0445 ms
+2024-09-30 08:02:37.273 +05:00 [INF] HTTP GET /Admin/Home/Index responded 200 in 70.5798 ms
+2024-09-30 08:02:37.600 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.6599 ms
+2024-09-30 08:02:37.628 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.4520 ms
+2024-09-30 08:03:11.223 +05:00 [INF] HTTP GET / responded 200 in 335.9346 ms
+2024-09-30 08:03:11.366 +05:00 [INF] HTTP GET /css/font-awesome.css responded 404 in 47.9622 ms
+2024-09-30 08:03:13.308 +05:00 [INF] HTTP GET /Admin/Home/Index responded 200 in 94.4390 ms
+2024-09-30 08:03:13.629 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.9683 ms
+2024-09-30 08:03:13.718 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.9984 ms
+2024-09-30 08:03:21.719 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 1.9724 ms
+2024-09-30 08:05:57.911 +05:00 [INF] HTTP GET / responded 200 in 388.1855 ms
+2024-09-30 08:05:57.971 +05:00 [INF] HTTP GET /css/font-awesome.css responded 404 in 8.2096 ms
+2024-09-30 08:06:00.285 +05:00 [INF] HTTP GET /Admin/Home/Index responded 200 in 105.0758 ms
+2024-09-30 08:06:00.561 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 5.7423 ms
+2024-09-30 08:06:00.650 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 2.7829 ms
+2024-09-30 08:06:41.988 +05:00 [INF] HTTP GET / responded 200 in 254.2304 ms
+2024-09-30 08:06:42.085 +05:00 [INF] HTTP GET /css/font-awesome.css responded 404 in 17.3601 ms
+2024-09-30 08:06:44.285 +05:00 [INF] HTTP GET /Admin/Home/Index responded 200 in 134.2263 ms
+2024-09-30 08:06:44.629 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 3.3776 ms
+2024-09-30 08:06:44.667 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 11.0815 ms
+2024-09-30 08:09:50.029 +05:00 [INF] HTTP GET / responded 200 in 169.6513 ms
+2024-09-30 08:09:50.106 +05:00 [INF] HTTP GET /css/font-awesome.css responded 404 in 32.4016 ms
+2024-09-30 08:09:51.945 +05:00 [INF] HTTP GET /Admin/Home/Index responded 200 in 101.5818 ms
+2024-09-30 08:09:52.366 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.6688 ms
+2024-09-30 08:09:52.381 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 1.1946 ms
+2024-09-30 08:11:56.833 +05:00 [INF] HTTP GET / responded 200 in 561.3290 ms
+2024-09-30 08:11:57.207 +05:00 [INF] HTTP GET /css/font-awesome.css responded 404 in 207.6074 ms
+2024-09-30 08:12:05.944 +05:00 [INF] HTTP GET /Admin/Home/Index responded 200 in 74.0472 ms
+2024-09-30 08:12:06.199 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 2.0833 ms
+2024-09-30 08:12:06.228 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 1.0410 ms
+2024-09-30 08:12:50.237 +05:00 [INF] HTTP GET / responded 200 in 655.3255 ms
+2024-09-30 08:12:50.471 +05:00 [INF] HTTP GET /css/font-awesome.css responded 404 in 49.5543 ms
+2024-09-30 08:12:51.747 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 2.8443 ms
+2024-09-30 08:12:51.893 +05:00 [INF] HTTP GET /Admin/Home/Index responded 200 in 1027.2546 ms
+2024-09-30 08:12:52.410 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 3.4090 ms
+2024-09-30 08:15:01.609 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-regular-400.woff2 responded 404 in 27.5933 ms
+2024-09-30 08:15:01.621 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-regular-400.ttf responded 404 in 0.5902 ms
+2024-09-30 08:15:58.864 +05:00 [INF] HTTP GET / responded 200 in 334.5903 ms
+2024-09-30 08:15:58.925 +05:00 [INF] HTTP GET /css/font-awesome.css responded 404 in 7.3698 ms
+2024-09-30 08:16:01.317 +05:00 [INF] HTTP GET /Admin/Home/Index responded 200 in 93.4011 ms
+2024-09-30 08:16:01.585 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 1.4818 ms
+2024-09-30 08:16:01.658 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 1.3736 ms
+2024-09-30 08:16:38.610 +05:00 [INF] HTTP GET / responded 200 in 304.6033 ms
+2024-09-30 08:16:38.694 +05:00 [INF] HTTP GET /css/font-awesome.css responded 404 in 17.3196 ms
+2024-09-30 08:16:39.867 +05:00 [INF] HTTP GET /Admin/Home/Index responded 200 in 332.5835 ms
+2024-09-30 08:16:40.128 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 1.1080 ms
+2024-09-30 08:16:40.303 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 1.5363 ms
+2024-09-30 08:25:15.870 +05:00 [INF] HTTP GET / responded 200 in 260.6625 ms
+2024-09-30 08:25:15.911 +05:00 [INF] HTTP GET /css/font-awesome.css responded 404 in 7.1087 ms
+2024-09-30 08:25:21.839 +05:00 [INF] HTTP GET /Admin/Home/Index responded 200 in 44.1289 ms
+2024-09-30 08:25:22.032 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.8678 ms
+2024-09-30 08:25:22.058 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 2.2784 ms
+2024-09-30 08:25:53.882 +05:00 [INF] HTTP GET / responded 200 in 118.2429 ms
+2024-09-30 08:25:53.929 +05:00 [INF] HTTP GET /css/font-awesome.css responded 404 in 5.2119 ms
+2024-09-30 08:25:56.142 +05:00 [INF] HTTP GET /Admin/Home/Index responded 200 in 48.3895 ms
+2024-09-30 08:25:56.377 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.9064 ms
+2024-09-30 08:25:56.415 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.5483 ms
+2024-09-30 08:26:43.506 +05:00 [INF] HTTP GET / responded 200 in 257.4583 ms
+2024-09-30 08:26:43.582 +05:00 [INF] HTTP GET /css/font-awesome.css responded 404 in 6.1484 ms
+2024-09-30 08:26:44.808 +05:00 [INF] HTTP GET /Admin/Home/Index responded 200 in 57.4614 ms
+2024-09-30 08:26:45.056 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.7675 ms
+2024-09-30 08:26:45.069 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.8049 ms
+2024-09-30 08:27:20.487 +05:00 [INF] HTTP GET / responded 200 in 277.6105 ms
+2024-09-30 08:27:20.585 +05:00 [INF] HTTP GET /css/font-awesome.css responded 404 in 7.2021 ms
+2024-09-30 08:27:27.718 +05:00 [INF] HTTP GET /Admin/Home/Index responded 200 in 48.1247 ms
+2024-09-30 08:27:27.958 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.5631 ms
+2024-09-30 08:27:27.976 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.9503 ms
+2024-09-30 08:28:30.107 +05:00 [INF] HTTP GET / responded 200 in 183.6457 ms
+2024-09-30 08:28:30.253 +05:00 [INF] HTTP GET /css/font-awesome.css responded 404 in 49.3000 ms
+2024-09-30 08:28:31.673 +05:00 [INF] HTTP GET /Admin/Home/Index responded 200 in 158.6784 ms
+2024-09-30 08:28:31.919 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.8692 ms
+2024-09-30 08:28:32.079 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.6820 ms
+2024-09-30 08:29:19.484 +05:00 [INF] HTTP GET / responded 200 in 194.9442 ms
+2024-09-30 08:29:19.601 +05:00 [INF] HTTP GET /css/font-awesome.css responded 404 in 7.4307 ms
+2024-09-30 08:29:20.984 +05:00 [INF] HTTP GET /Admin/Home/Index responded 200 in 66.2018 ms
+2024-09-30 08:29:21.278 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.7334 ms
+2024-09-30 08:29:21.297 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.6566 ms
+2024-09-30 08:29:31.770 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 0.7177 ms
+2024-09-30 08:32:22.918 +05:00 [INF] HTTP GET / responded 200 in 7.7242 ms
+2024-09-30 08:32:22.963 +05:00 [INF] HTTP GET /css/font-awesome.css responded 404 in 0.3802 ms
+2024-09-30 08:32:24.510 +05:00 [INF] HTTP GET /Company/Account/Login responded 200 in 75.6420 ms
+2024-09-30 08:32:24.563 +05:00 [INF] HTTP GET /assets/js/plugins/jquery-validation/jquery.validate.min.js responded 404 in 1.5137 ms
+2024-09-30 08:32:24.714 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 1.0516 ms
+2024-09-30 08:32:24.738 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.6882 ms
+2024-09-30 08:32:27.650 +05:00 [INF] HTTP POST /Company/Account/Login responded 302 in 1760.0056 ms
+2024-09-30 08:32:27.966 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 301.8403 ms
+2024-09-30 08:32:28.099 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-regular-400.woff2 responded 404 in 0.5371 ms
+2024-09-30 08:32:28.099 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.6290 ms
+2024-09-30 08:32:28.120 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-regular-400.ttf responded 404 in 3.3761 ms
+2024-09-30 08:32:28.123 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.9688 ms
+2024-09-30 08:32:31.356 +05:00 [INF] HTTP GET /Company/Client/index responded 200 in 26.8384 ms
+2024-09-30 08:32:31.470 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 1.2639 ms
+2024-09-30 08:32:31.502 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 1.2544 ms
+2024-09-30 08:32:31.758 +05:00 [INF] HTTP POST /api/Client/GetAdminClientsList responded 200 in 289.3544 ms
+2024-09-30 08:35:18.249 +05:00 [INF] HTTP GET / responded 200 in 171.9526 ms
+2024-09-30 08:35:18.306 +05:00 [INF] HTTP GET /css/font-awesome.css responded 404 in 13.2768 ms
+2024-09-30 08:35:20.854 +05:00 [INF] HTTP GET /Admin/Home/Index responded 200 in 91.5977 ms
+2024-09-30 08:35:21.040 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.8458 ms
+2024-09-30 08:35:21.058 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.8052 ms
+2024-09-30 08:37:47.741 +05:00 [INF] HTTP GET / responded 200 in 103.2536 ms
+2024-09-30 08:37:47.791 +05:00 [INF] HTTP GET /css/font-awesome.css responded 404 in 6.5558 ms
+2024-09-30 08:38:36.811 +05:00 [INF] HTTP GET /Admin/Home/Index responded 200 in 61.1785 ms
+2024-09-30 08:38:37.044 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.5509 ms
+2024-09-30 08:38:37.067 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.7976 ms
+2024-09-30 08:39:59.816 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 7.7168 ms
+2024-09-30 08:41:06.199 +05:00 [INF] HTTP GET / responded 200 in 346.4085 ms
+2024-09-30 08:41:06.382 +05:00 [INF] HTTP GET /css/font-awesome.css responded 404 in 19.9552 ms
+2024-09-30 08:41:08.695 +05:00 [INF] HTTP GET /Admin/Home/Index responded 200 in 262.8259 ms
+2024-09-30 08:41:08.945 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 1.1288 ms
+2024-09-30 08:41:09.023 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.6367 ms
+2024-09-30 21:10:07.907 +05:00 [INF] HTTP GET / responded 200 in 144.9794 ms
+2024-09-30 21:10:07.963 +05:00 [INF] HTTP GET /landing_page/owl-carousel/assets/owl.carousel.min.css responded 304 in 9.8073 ms
+2024-09-30 21:10:07.947 +05:00 [INF] HTTP GET /css/font-awesome.css responded 404 in 6.2532 ms
+2024-09-30 21:10:07.963 +05:00 [INF] HTTP GET /landing_page/css/bootstrap.min.css responded 304 in 17.8051 ms
+2024-09-30 21:10:08.016 +05:00 [INF] HTTP GET /landing_page/js/popper.min.js responded 304 in 0.3770 ms
+2024-09-30 21:10:07.963 +05:00 [INF] HTTP GET /landing_page/css/style.css responded 304 in 0.8910 ms
+2024-09-30 21:10:07.970 +05:00 [INF] HTTP GET /landing_page/images/banner-img.png responded 304 in 3.7061 ms
+2024-09-30 21:10:08.009 +05:00 [INF] HTTP GET /landing_page/js/jquery-3.3.1.slim.min.js responded 304 in 36.1966 ms
+2024-09-30 21:10:08.023 +05:00 [INF] HTTP GET /landing_page/js/bootstrap.min.js responded 304 in 0.2846 ms
+2024-09-30 21:10:08.038 +05:00 [INF] HTTP GET /assets/media/photos/ndis.jpg responded 304 in 0.1878 ms
+2024-09-30 21:10:08.038 +05:00 [INF] HTTP GET /landing_page/owl-carousel/owl.carousel.min.js responded 304 in 0.1881 ms
+2024-09-30 21:10:08.038 +05:00 [INF] HTTP GET /landing_page/js/main.js responded 304 in 0.1931 ms
+2024-09-30 21:10:08.137 +05:00 [INF] HTTP GET /landing_page/fonts/Lato-Light.ttf responded 304 in 0.2580 ms
+2024-09-30 21:10:08.137 +05:00 [INF] HTTP GET /landing_page/fonts/OpenSans-Regular.ttf responded 304 in 0.1383 ms
+2024-09-30 21:10:08.137 +05:00 [INF] HTTP GET /landing_page/fonts/Lato-Medium.ttf responded 304 in 6.1581 ms
+2024-09-30 21:10:08.137 +05:00 [INF] HTTP GET /landing_page/fonts/OpenSans-Semibold.ttf responded 304 in 6.1925 ms
+2024-09-30 21:10:14.984 +05:00 [INF] HTTP GET /js/global.js responded 304 in 0.6330 ms
+2024-09-30 21:10:14.994 +05:00 [INF] HTTP GET /Admin/Home/Index responded 200 in 90.5130 ms
+2024-09-30 21:10:14.996 +05:00 [INF] HTTP GET /assets/css/dashmix.min.css responded 304 in 0.5815 ms
+2024-09-30 21:10:14.996 +05:00 [INF] HTTP GET /assets/js/lib/jquery.min.js responded 304 in 0.6145 ms
+2024-09-30 21:10:15.103 +05:00 [INF] HTTP GET /assets/js/plugins/chart.js/chart.min.js responded 304 in 0.3389 ms
+2024-09-30 21:10:15.103 +05:00 [INF] HTTP GET /assets/js/dashmix.app.min.js responded 304 in 0.3463 ms
+2024-09-30 21:10:15.179 +05:00 [INF] HTTP GET /assets/fonts/inter/inter-v11-latin-600.woff2 responded 304 in 0.1875 ms
+2024-09-30 21:10:15.179 +05:00 [INF] HTTP GET /assets/fonts/inter/inter-v11-latin-regular.woff2 responded 304 in 0.2390 ms
+2024-09-30 21:10:15.193 +05:00 [INF] HTTP GET /assets/fonts/simple-line-icons/Simple-Line-Icons.woff2 responded 304 in 1.3859 ms
+2024-09-30 21:10:15.180 +05:00 [INF] HTTP GET /assets/fonts/inter/inter-v11-latin-500.woff2 responded 304 in 0.7749 ms
+2024-09-30 21:10:15.195 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 1.4390 ms
+2024-09-30 21:10:15.202 +05:00 [INF] HTTP GET /assets/fonts/inter/inter-v11-latin-700.woff2 responded 304 in 0.3235 ms
+2024-09-30 21:10:15.223 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.4430 ms
+2024-09-30 21:10:15.252 +05:00 [INF] HTTP GET /assets/fonts/fontawesome/fa-solid-900.woff2 responded 304 in 0.3053 ms
+2024-09-30 21:13:22.252 +05:00 [INF] HTTP GET / responded 200 in 162.4357 ms
+2024-09-30 21:13:22.470 +05:00 [INF] HTTP GET /css/font-awesome.css responded 404 in 100.0457 ms
+2024-09-30 21:13:31.294 +05:00 [INF] HTTP GET /Admin/Home/Index responded 200 in 144.5998 ms
+2024-09-30 21:13:31.522 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.9004 ms
+2024-09-30 21:13:31.548 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.9790 ms
+2024-09-30 21:14:25.995 +05:00 [INF] HTTP GET / responded 200 in 233.7974 ms
+2024-09-30 21:14:26.063 +05:00 [INF] HTTP GET /css/font-awesome.css responded 404 in 19.5854 ms
+2024-09-30 21:14:28.644 +05:00 [INF] HTTP GET /Admin/Home/Index responded 200 in 137.3472 ms
+2024-09-30 21:14:28.893 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.7825 ms
+2024-09-30 21:14:28.935 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.8424 ms
+2024-09-30 21:16:00.001 +05:00 [INF] HTTP GET / responded 200 in 254.8307 ms
+2024-09-30 21:16:00.096 +05:00 [INF] HTTP GET /css/font-awesome.css responded 404 in 31.2698 ms
+2024-09-30 21:16:11.037 +05:00 [INF] HTTP GET /Admin/Home/Index responded 200 in 148.7701 ms
+2024-09-30 21:16:11.276 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.8930 ms
+2024-09-30 21:16:11.310 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.6578 ms
+2024-09-30 21:16:41.189 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 1.0637 ms
+2024-09-30 21:19:13.424 +05:00 [INF] HTTP GET / responded 200 in 130.1004 ms
+2024-09-30 21:19:13.464 +05:00 [INF] HTTP GET /css/font-awesome.css responded 404 in 6.1842 ms
+2024-09-30 21:19:18.394 +05:00 [INF] HTTP GET /Admin/Home/Index responded 200 in 137.1214 ms
+2024-09-30 21:19:18.649 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 1.3277 ms
+2024-09-30 21:19:18.679 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.6795 ms
+2024-09-30 21:23:13.138 +05:00 [INF] HTTP GET / responded 200 in 165.1721 ms
+2024-09-30 21:23:13.212 +05:00 [INF] HTTP GET /css/font-awesome.css responded 404 in 4.5288 ms
+2024-09-30 21:23:28.351 +05:00 [INF] HTTP GET /Admin/Home/Index responded 200 in 302.8849 ms
+2024-09-30 21:23:28.581 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 1.3173 ms
+2024-09-30 21:23:29.323 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.6304 ms
+2024-09-30 21:23:49.754 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 1.0924 ms
+2024-09-30 21:25:07.357 +05:00 [INF] HTTP GET / responded 200 in 143.7296 ms
+2024-09-30 21:25:07.423 +05:00 [INF] HTTP GET /css/font-awesome.css responded 404 in 5.3789 ms
+2024-09-30 21:25:10.400 +05:00 [INF] HTTP GET /Admin/Home/Index responded 200 in 179.2271 ms
+2024-09-30 21:25:10.610 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 2.3396 ms
+2024-09-30 21:25:10.638 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 1.0272 ms
+2024-09-30 21:26:29.290 +05:00 [INF] HTTP GET / responded 200 in 209.1081 ms
+2024-09-30 21:26:29.338 +05:00 [INF] HTTP GET /css/font-awesome.css responded 404 in 7.1583 ms
+2024-09-30 21:26:31.919 +05:00 [INF] HTTP GET /Admin/Home/Index responded 200 in 257.2840 ms
+2024-09-30 21:26:32.032 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 4.3122 ms
+2024-09-30 21:26:32.059 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 1.0282 ms

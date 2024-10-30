@@ -1,0 +1,334 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model NDIS.Entities.AddUpdateAdminClientBudget
+@{
+    ViewData["Title"] = "AddClientBudget";
+    Layout = "~/Areas/Company/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    /* Styles for the dropdown */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        max-height: 200px;
+        overflow-y: auto;
+        border: 1px solid #ccc;
+        z-index: 1;
+    }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+            .dropdown-content a:hover {
+                background-color: #ddd;
+            }
+
+    .show {
+        display: block;
+    }
+</style>
+
+<main id="main-container">
+
+    <div class="content">
+        <div class="block block-rounded">
+            <div class="block-header block-header-default">
+                <h3 class="block-title">Budget Setup</h3>
+            </div>
+            <div class="block-content">
+                <form asp-action="AddClientBudget" asp-controller="Client" method="POST">
+                    @* <h2 class="content-heading pt-0">Basic</h2> *@
+                    @* <div  asp-validation-summary="All" class="invalid-feedback animated"></div> *@
+                    <div class="row push">
+                        @Html.HiddenFor(a => a.ClientBudgetId)
+                        @Html.HiddenFor(a => a.CompanyId)
+                        <div class="col-lg-12 col-xl-6">
+                            <div class="mb-4">
+                                <label class="form-label" for="example-text-input">Participant <span class="text-danger">*</span></label>
+                                <select id="ClientId" name="ClientId" asp-for="ClientId" class="form-control" asp-items="@(new SelectList(Model.Clients,"ClientId","FirstName"))">
+                                </select>
+                                <span asp-validation-for="ClientId" class="text-danger"></span>
+                            </div>
+
+                            
+                                <div class="mb-4">
+                                    <label class="form-label" for="example-text-input">First Name <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" asp-for="FirstName" id="FirstName" name="FirstName" placeholder="Enter First Name">
+                                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                                </div>
+
+                            <div class="mb-4">
+                                <label class="form-label" for="example-email-input">Mobile <span class="text-danger">*</span></label>
+                                <input type="tel" maxlength="10" asp-for="MobileNumber" class="form-control" id="MobileNumber" name="MobileNumber" placeholder="Mobile">
+                                <span asp-validation-for="MobileNumber" class="text-danger"></span>
+                            </div>
+                            <div class="mb-4">
+                            <label class="form-label" for="example-textarea-input">Address</label>
+                            <input class="form-control" asp-for="ClientAddress" id="ClientAddress" name="ClientAddress" rows="4" placeholder="Client Address.." spellcheck="false"></input>
+                            <sider-quick-compose-btn data-gpts-theme="light"></sider-quick-compose-btn>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label" for="example-email-input">Start Date</label>
+                                <input type="date" asp-for="StartDate" class="form-control" id="StartDate" name="StartDate"  placeholder="Start Date">
+                                <span asp-validation-for="StartDate" class="text-danger"></span>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label" for="example-email-input">NDIS Reference no <span class="text-danger">*</span></label>
+                                <input type="number" asp-for="NDISRefno" class="form-control" id="NDISRefno" name="NDISRefno" placeholder="NDIS Reference no">
+                                <span asp-validation-for="NDISRefno" class="text-danger"></span>
+
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label" for="example-textarea-input">Info</label>
+                                <textarea class="form-control" asp-for="Info" id="Info" name="Info" rows="4" placeholder="Info.." spellcheck="false"></textarea>
+                                <sider-quick-compose-btn data-gpts-theme="light"></sider-quick-compose-btn>
+                            </div>
+
+                            
+
+
+                        </div>
+                        <div class="col-lg-12 col-xl-6">
+                            <div class="mb-4">
+                                <label class="form-label" for="val-skill">State <span class="text-danger">*</span></label>
+                                <select class="form-select" asp-for="StateId" id="StateId" name="StateId" asp-items="@(new SelectList(Model.States,"StateId","StateName"))">
+                                </select>
+                                <span asp-validation-for="StateId" class="text-danger"></span>
+                            </div>
+                            
+                                <div class="mb-4">
+                                    <label class="form-label" for="example-text-input">Last Name <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" asp-for="LastName" id="LastName" name="LastName" placeholder="Enter Last Name">
+                                    <span asp-validation-for="LastName" class="text-danger"></span>
+
+                                </div>
+                            <div class="mb-4">
+                                <label class="form-label" for="example-email-input">Email</label>
+                                <input type="email" asp-for="EmailId" class="form-control" id="EmailId" name="EmailId" placeholder="Emai Input">
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label" for="example-text-input">DOB @* <span class="text-danger">*</span> *@</label>
+                                <input type="date" asp-for="DateOfBirth" class="form-control" id="DateOfBirth" name="DateOfBirth" placeholder="DOB">
+                                @* <span asp-validation-for="DOB" class="text-danger"></span> *@
+
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label" for="example-email-input">End Date</label>
+                                <input type="date" asp-for="EndDate" class="form-control" id="EndDate" name="EndDate" placeholder="End Date">
+                                <span asp-validation-for="EndDate" class="text-danger"></span>
+                            </div>
+                           
+                           
+                            <div class="mb-4">
+                                <label class="form-label" for="example-email-input">Proposed Budget <span class="text-danger">*</span></label>
+                                <input type="number" asp-for="ProposedBudget" class="form-control" id="ProposedBudget" name="ProposedBudget" placeholder="Proposed Budget">
+                                <span asp-validation-for="ProposedBudget" class="text-danger"></span>
+
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="form-label" for="val-skill">Status </label>
+                                <select class="form-select" asp-for="IsActive" id="IsActive" name="IsActive" fdprocessedid="xkq1ao" aria-describedby="val-skill-error" aria-invalid="true">
+                                    <option value="1">Active</option>
+                                    <option value="0">Inactive</option>
+                                </select>
+
+                            </div>
+
+                           
+
+                        </div>
+                    </div>
+
+                    <div class="row push" >
+                        <div class="col-lg-12 col-xl-6">
+                            <div class="block-header block-header-default">
+                                <h3 class="block-title">Support Coordinator</h3>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label" for="example-email-input">Name</label>
+                                <input type="text" asp-for="SupportCoordinator" class="form-control" id="SupportCoordinator" name="SupportCoordinator" placeholder="Support Coordinator Name">
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label" for="example-email-input">Company</label>
+                                <input type="text" asp-for="SCCompany" class="form-control" id="SCCompany" name="SCCompany" placeholder="Company">
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label" for="example-email-input">Phone</label>
+                                <input type="text" asp-for="SCPhone" class="form-control" id="SCPhone" name="SCPhone" placeholder="Phone">
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label" for="example-email-input">Support Coordinator Email</label>
+                                <input type="email" asp-for="SCEmail" class="form-control" id="SCEmail" name="SCEmail" placeholder="Email">
+                            </div>
+
+                        </div>
+                        <div class="col-lg-12 col-xl-6">
+                            <div class="block-header block-header-default">
+                                <h3 class="block-title">Plan Manager</h3>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label" for="example-email-input">Name</label>
+                                <input type="text" asp-for="PlanManager" class="form-control" id="PlanManager" name="PlanManager" placeholder="Plan Manager Name">
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label" for="example-email-input">Phone</label>
+                                <input type="text" asp-for="PMPhone" class="form-control" id="PMPhone" name="PMPhone" placeholder="Phone">
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label" for="example-email-input">Plan Manager Email</label>
+                                <input type="email" asp-for="PMEmail" class="form-control" id="PMEmail" name="PMEmail" placeholder="Email">
+                            </div>
+                            <div class="mb-4">
+                                <br />
+                                <button type="submit" id="savebtn" class="btn btn-primary ">Save</button>
+                                <a type="button" href="/Company/client/budget" id="cnlbtn" class="btn btn-warning">Cancel</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div id="divitems">
+                <div class="block-header block-header-default">
+                    <h3 class="block-title">Add Budget Support Item</h3>
+                </div>
+                <div class="block-content">
+                    <div class="block block-rounded">
+                        <div class="block-header block-header-default">
+                            <div class="col-sm-12 col-md-3">
+                                <label class="form-label" for="example-email-input">Support Category</label>
+                                <select class="form-select" id="SupportCategoryId" name="SupportCategoryId" asp-items="@(new SelectList(Model.SupportCategories,"SupportCategoryId","SupportCategoryName"))">
+                                </select>
+                            </div>
+
+                            <div class="col-sm-12 col-md-2">
+                                <label class="form-label" for="example-email-input">Supprot Category budget</label>
+                                <input type="text" class="form-control" id="itemprice" value="0.00">
+
+                            </div>
+
+                            <div class="col-sm-12 col-md-4">
+                                <label class="form-label" for="example-email-input">Support Item</label>
+                                <select class="form-select" id="SupportItemId">
+                                </select>
+                            </div>
+
+                           
+
+                            <div class="col-sm-12 col-md-2">
+                                <button type="button" class="btn btn-primary" id="additemp"> Add </button>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                @* <div class="block-header block-header-default">
+                <h3 class="block-title">Added Budget Support Items</h3>
+                </div> *@
+                <div class="block-content">
+                    <div class="block block-rounded">
+                        <div class="block-header block-header-default" style="display:none;">
+                            <div class="col-sm-12 col-md-6">
+                                @* <label class="form-label" for="example-text-input">Search</label> *@
+                                <input type="text" class="form-control Searchstr" id="SearchStr" name="SearchStr" placeholder="Search">
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <label class="form-label" for="example-text-input"></label>
+                                <button type="button" id="shwbtn" class="btn btn-primary ">Search</button>
+                                <button type="button" id="shwallbtn" class="btn btn-primary ">Show all</button>
+
+                                @* <button type="button" id="addentitry" data-cid="@Model.ClientBudgetId" class="btn btn-primary ">Add</button> *@
+
+                            </div>
+                        </div>
+                        <div class="row" style="display:none;">
+                            <div class="col-sm-12 col-md-4 pull-right">
+                                Total: <span id="totalrec"></span>
+                            </div>
+                            <div class="col-sm-12 col-md-4">
+                                <div id="showpageinfo" class="col-auto">
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-4 pull-left">
+                                <select class="form-select" id="ddlpagesize">
+                                    <option>25</option>
+                                    <option>50</option>
+                                    <option>75</option>
+                                    <option>100</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="block-content block-content-full">
+                            <div id="DataTables_Table_3_wrapper" class="dataTables_wrapper dt-bootstrap5 no-footer">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <table class="table clientsDatatable" id="tbldata1" aria-describedby="DataTables_Table_3_info">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        SL No.
+                                                    </th>
+                                                    <th>
+                                                        Support Category
+                                                    </th>
+                                                    <th>
+                                                        Support Item Id
+                                                    </th>
+                                                    <th>
+                                                        Support Item Name
+                                                    </th>
+                                                    <th>
+                                                        Support Category Budget
+                                                    </th>
+
+                                                    <th>
+                                                        Created Date
+                                                    </th>
+                                                    <th>
+                                                        Actions
+                                                    </th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody id="tbldata">
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="row" style="display:none;">
+                                    <div class="px-2 my-2 pull-right">
+                                        <ul class="pagination m-0">
+                                            <li class="active"><a href="#"><i class="fas fa-angle-double-left"></i></a></li>
+                                            <li><a href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#"><i class="fas fa-angle-double-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="~/js/AddClientBudget.js"></script>
+

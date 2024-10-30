@@ -1,0 +1,83 @@
+﻿@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Areas/Company/Views/Shared/_Layout.cshtml";
+	//var CompanyId = Convert.ToInt32(IHttpContextAccessor.HttpContext?.User.FindFirstValue(ClaimTypes.NameIdentifier));
+}
+<input type="hidden" id="CompanyId" name="CompanyId" value="@ViewBag.CompanyId" />
+<main id="main-container">
+    <div class="content">
+        <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center mb-5">
+            <h1 class="fw-bold text-capitalize F_28">Participants</h1>
+            <button id="addentitry" class="btn btn-primary">
+                <i class="fa fa-plus me-2" aria-hidden="true"></i>Add New
+            </button>
+        </div>
+        <!--begin::Card-->
+        <div id="participants" class="card shadow-lg border-0">
+            <!--begin:Card header-->
+            <div class="card-header">
+                <div class="card-toolbar">
+                    <!--begin::Search-->
+                    <div class="position-relative my-1">
+                        <i class="ki-duotone ki-magnifier fs-3 position-absolute ms-7 top-50 translate-middle text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px">
+                                <path d="M 13.261719 14.867188 L 15.742188 17.347656 C 15.363281 18.070313 15.324219 18.789063 15.722656 19.1875 L 20.25 23.714844 C 20.820313 24.285156 22.0625 23.972656 23.015625 23.015625 C 23.972656 22.058594 24.285156 20.820313 23.714844 20.25 L 19.191406 15.722656 C 18.789063 15.324219 18.070313 15.363281 17.347656 15.738281 L 14.867188 13.261719 Z M 8.5 0 C 3.804688 0 0 3.804688 0 8.5 C 0 13.195313 3.804688 17 8.5 17 C 13.195313 17 17 13.195313 17 8.5 C 17 3.804688 13.195313 0 8.5 0 Z M 8.5 15 C 4.910156 15 2 12.089844 2 8.5 C 2 4.910156 4.910156 2 8.5 2 C 12.089844 2 15 4.910156 15 8.5 C 15 12.089844 12.089844 15 8.5 15 Z" />
+                            </svg>
+                        </i>
+                        <input type="text" id="kt_filter_search" class="form-control form-control-sm ps-12" placeholder="Search Participants" />
+                    </div>
+                    <!--end::Search-->
+                </div>
+            </div>
+            <!--end:Card header-->
+            <!--begin:Card body-->
+            <div class="card-body">
+                <div class="table-responsive">
+                    <!--begin::Table-->
+                    <table class="table table-striped table-bordered table-hover align-middle">
+                        <thead>
+                            <tr>
+                                <th class="table-header min-w-200px">Name</th>
+                                <th class="table-header min-w-150px">Mobile</th>
+                                <th class="table-header min-w-100px">Email ID</th>
+                                <th class="table-header min-w-100px">Status</th>
+                                <th class="table-header min-w-150px">Created Date</th>
+                                <th class="table-header min-w-150px">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbldata">
+                        </tbody>
+                    </table>
+                    <!--end::Table-->
+                </div>
+                <!--begin:Card footer-->
+                <div class="card-footer d-flex justify-content-between align-items-center">
+                    <div>
+                        <label for="ddlpagesize" class="me-2">Records per page:</label>
+                        <select id="ddlpagesize" class="form-select form-select-sm">
+                            <option value="5">5</option>
+                            <option value="10" selected>10</option>
+                            <option value="20">20</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                        </select>
+                    </div>
+                    <div id="pagination" class="pagination">
+                        <!-- Example pagination buttons -->
+                        <ul class="pagination pagination-sm">
+                            <li class="page-item"><a class="page-link" href="#">«</a></li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">»</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--end:Card footer-->
+            </div>
+            <!--end:Card body-->
+        </div>
+    </div>
+</main>
+
+<script src="~/js/client.js"></script>

@@ -1,0 +1,90 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model NDIS.Entities.AdminAddCompany
+@{
+    ViewData["Title"] = "Add";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<main id="main-container">
+    <div class="content">
+        <div class="d-md-flex justify-content-md-between align-items-md-center py-3 pt-md-3 pb-md-0 text-center text-md-start">
+            <div>
+                <h1 class="my-5 ms-5 fw-bold text-capitalize F_28">Add Company</h1>
+            </div>
+        </div>
+        <div class="post fs-6 d-flex flex-column-fluid" id="kt_post">
+            <div class="container-fluid">
+                <div class="row g-5 gx-xl-10">
+                    <div class="col-xxl-12 mb-md-12 mb-xl-12">
+                        <form asp-action="Add" asp-controller="Company" method="POST">
+                            <div class="row push">
+                                @Html.HiddenFor(a => a.CompanyId)
+
+                                <div class="col-lg-12 col-xl-6 mb-4">
+                                    <label class="form-label" for="example-text-input">Company Name <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" asp-for="CompanyName" id="CompanyName" name="CompanyName" placeholder="Enter Company Name">
+                                    <span asp-validation-for="CompanyName" class="text-danger"></span>
+                                </div>
+
+                                <div class="col-lg-12 col-xl-6 mb-4">
+                                    <label class="form-label" for="val-skill">Company Type <span class="text-danger">*</span></label>
+                                    <select class="form-select" asp-for="CompanyTypeId" id="CompanyTypeId" name="CompanyTypeId" asp-items="@(new SelectList(Model.CompanyTypes,"CompanyTypeId","CompanyType"))">
+                                    </select>
+                                    <span asp-validation-for="CompanyTypeId" class="text-danger"></span>
+                                </div>
+
+                                <div class="col-lg-12 col-xl-6 mb-4">
+                                    <label class="form-label" for="example-email-input">Contact Number <span class="text-danger">*</span></label>
+                                    <input type="number" asp-for="ContactNumber" class="form-control" id="ContactNumber" name="ContactNumber" placeholder="Contact Number">
+                                    <span asp-validation-for="ContactNumber" class="text-danger"></span>
+                                </div>
+
+                                <div class="col-lg-12 col-xl-6 mb-4">
+                                    <label class="form-label" for="example-email-input">Email</label>
+                                    <input type="email" asp-for="EmailId" class="form-control" id="EmailId" name="EmailId" placeholder="Emai Input">
+
+                                </div>
+
+                                <div class="col-lg-12 col-xl-6 mb-4">
+                                    <label class="form-label" for="example-email-input">UserName</label>
+                                    <input type="text" asp-for="UserName" class="form-control" id="UserName" name="UserName" placeholder="UserName">
+                                    <span asp-validation-for="UserName" class="text-danger"></span>
+
+                                </div>
+
+                                <div class="col-lg-12 col-xl-6 mb-4">
+                                    <label class="form-label" for="example-email-input">Password</label>
+                                    <input type="text" asp-for="Password" class="form-control" id="Password" name="Password" placeholder="Password">
+                                    <span asp-validation-for="Password" class="text-danger"></span>
+
+                                </div>
+
+                                <div class="col-lg-12 col-xl-6 mb-4">
+                                    <label class="form-label" for="example-textarea-input">Address</label>
+                                    <textarea class="form-control" rows="1" asp-for="Address" id="Address" name="Address" rows="4" placeholder="Client Address.." spellcheck="false"></textarea>
+                                    <sider-quick-compose-btn data-gpts-theme="light"></sider-quick-compose-btn>
+
+                                </div>
+
+                                <div class="col-lg-12 col-xl-6 mb-4">
+                                    <label class="form-label" for="val-skill">Status </label>
+                                    <select class="form-select" asp-for="IsActive" id="IsActive" name="IsActive" fdprocessedid="xkq1ao" aria-describedby="val-skill-error" aria-invalid="true">
+                                        <option value="1">Active</option>
+                                        <option value="0">Inactive</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-lg-12 d-flex justify-content-end mt-4">
+                                    <button type="submit" id="savebtn"
+                                            class="btn btn-outline-primary me-2">
+                                        Save
+                                    </button>
+                                    <a  id="cnlbtn" class="btn btn-outline-warning">Cancel</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

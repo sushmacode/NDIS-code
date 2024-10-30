@@ -1,0 +1,335 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model NDIS.Entities.AddUpdateAdminClientBudget
+@{
+    ViewData["Title"] = "AddClientBudget";
+    Layout = "~/Areas/Company/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    /* Styles for the dropdown */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        max-height: 200px;
+        overflow-y: auto;
+        border: 1px solid #ccc;
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+
+    .show {
+        display: block;
+    }
+</style>
+
+<main id="main-container">
+    <div class="content">
+        <div
+            class="d-md-flex justify-content-md-between align-items-md-center py-3 pt-md-3 pb-md-0 text-center text-md-start">
+            <h1 class="my-5 ms-5 fw-bold text-capitalize F_28">Budget Setup</h1>
+        </div>
+        <div class="post fs-6 d-flex flex-column-fluid" id="kt_post">
+            <div class="container-fluid">
+                <div class="row g-5 gx-xl-10">
+                    <div class="col-xxl-12 mb-md-12 mb-xl-12">
+                        <form asp-action="AddClientBudget" asp-controller="Client" method="POST">
+                            @Html.HiddenFor(a => a.ClientBudgetId)
+                            @Html.HiddenFor(a => a.CompanyId)
+
+                            <div class="row g-4">
+                                <!-- First Column -->
+                                <div class="col-lg-6">
+                                    <div class="mb-4">
+                                        <label class="form-label" for="ClientId">Participant <span
+                                                class="text-danger">*</span></label>
+                                        <select id="ClientId" name="ClientId" asp-for="ClientId" class="form-control"
+                                            asp-items="@(new SelectList(Model.Clients, "ClientId", "FirstName"))">
+                                        </select>
+                                        <span asp-validation-for="ClientId" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label class="form-label" for="FirstName">First Name <span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" asp-for="FirstName" id="FirstName"
+                                            name="FirstName" placeholder="Enter First Name">
+                                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label class="form-label" for="MobileNumber">Mobile <span
+                                                class="text-danger">*</span></label>
+                                        <input type="tel" maxlength="10" asp-for="MobileNumber" class="form-control"
+                                            id="MobileNumber" name="MobileNumber" placeholder="Mobile">
+                                        <span asp-validation-for="MobileNumber" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label class="form-label" for="ClientAddress">Address</label>
+                                        <input class="form-control" asp-for="ClientAddress" id="ClientAddress"
+                                            name="ClientAddress" rows="4" placeholder="Client Address.."
+                                            spellcheck="false"></input>
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label class="form-label" for="StartDate">Start Date</label>
+                                        <input type="date" asp-for="StartDate" class="form-control" id="StartDate"
+                                            name="StartDate" placeholder="Start Date">
+                                        <span asp-validation-for="StartDate" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label class="form-label" for="NDISRefno">NDIS Reference no <span
+                                                class="text-danger">*</span></label>
+                                        <input type="number" asp-for="NDISRefno" class="form-control" id="NDISRefno"
+                                            name="NDISRefno" placeholder="NDIS Reference no">
+                                        <span asp-validation-for="NDISRefno" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label class="form-label" for="Info">Info</label>
+                                        <textarea class="form-control" asp-for="Info" id="Info" name="Info" rows="1"
+                                            placeholder="Info.." spellcheck="false"></textarea>
+                                    </div>
+                                </div>
+
+                                <!-- Second Column -->
+                                <div class="col-lg-6">
+                                    <div class="mb-4">
+                                        <label class="form-label" for="StateId">State <span
+                                                class="text-danger">*</span></label>
+                                        <select class="form-select" asp-for="StateId" id="StateId" name="StateId"
+                                            asp-items="@(new SelectList(Model.States, "StateId", "StateName"))">
+                                        </select>
+                                        <span asp-validation-for="StateId" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label class="form-label" for="LastName">Last Name <span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" asp-for="LastName" id="LastName"
+                                            name="LastName" placeholder="Enter Last Name">
+                                        <span asp-validation-for="LastName" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label class="form-label" for="EmailId">Email</label>
+                                        <input type="email" asp-for="EmailId" class="form-control" id="EmailId"
+                                            name="EmailId" placeholder="Email Input">
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label class="form-label" for="DateOfBirth">DOB</label>
+                                        <input type="date" asp-for="DateOfBirth" class="form-control" id="DateOfBirth"
+                                            name="DateOfBirth" placeholder="DOB">
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label class="form-label" for="EndDate">End Date</label>
+                                        <input type="date" asp-for="EndDate" class="form-control" id="EndDate"
+                                            name="EndDate" placeholder="End Date">
+                                        <span asp-validation-for="EndDate" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label class="form-label" for="ProposedBudget">Proposed Budget <span
+                                                class="text-danger">*</span></label>
+                                        <input type="number" asp-for="ProposedBudget" class="form-control"
+                                            id="ProposedBudget" name="ProposedBudget" placeholder="Proposed Budget">
+                                        <span asp-validation-for="ProposedBudget" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label class="form-label" for="IsActive">Status</label>
+                                        <select class="form-select" asp-for="IsActive" id="IsActive" name="IsActive">
+                                            <option value="1">Active</option>
+                                            <option value="0">Inactive</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row g-4">
+                                <!-- Support Coordinator -->
+                                <div class="col-lg-6">
+                                    <div class="d-md-flex justify-content-md-between align-items-md-center text-center text-md-start">
+                                        <h1 class="my-5 fw-bold text-capitalize F_20">Support Coordinator</h1>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label class="form-label" for="SupportCoordinator">Name</label>
+                                        <input type="text" asp-for="SupportCoordinator" class="form-control"
+                                            id="SupportCoordinator" name="SupportCoordinator"
+                                            placeholder="Support Coordinator Name">
+                                    </div>
+                                    <div class="mb-4">
+                                        <label class="form-label" for="SCCompany">Company</label>
+                                        <input type="text" asp-for="SCCompany" class="form-control" id="SCCompany"
+                                            name="SCCompany" placeholder="Company">
+                                    </div>
+                                    <div class="mb-4">
+                                        <label class="form-label" for="SCPhone">Phone</label>
+                                        <input type="text" asp-for="SCPhone" class="form-control" id="SCPhone"
+                                            name="SCPhone" placeholder="Phone">
+                                    </div>
+                                    <div class="mb-4">
+                                        <label class="form-label" for="SCEmail">Support Coordinator Email</label>
+                                        <input type="email" asp-for="SCEmail" class="form-control" id="SCEmail"
+                                            name="SCEmail" placeholder="Email">
+                                    </div>
+                                </div>
+
+                                <!-- Plan Manager -->
+                                <div class="col-lg-6">
+                                    <div class="d-md-flex justify-content-md-between align-items-md-center text-center text-md-start">
+                                        <h1 class="my-5 fw-bold text-capitalize F_20">Plan Manager</h1>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label class="form-label" for="PlanManager">Name</label>
+                                        <input type="text" asp-for="PlanManager" class="form-control" id="PlanManager"
+                                            name="PlanManager" placeholder="Plan Manager Name">
+                                    </div>
+                                    <div class="mb-4">
+                                        <label class="form-label" for="PMPhone">Phone</label>
+                                        <input type="text" asp-for="PMPhone" class="form-control" id="PMPhone"
+                                            name="PMPhone" placeholder="Phone">
+                                    </div>
+                                    <div class="mb-4">
+                                        <label class="form-label" for="PMEmail">Plan Manager Email</label>
+                                        <input type="email" asp-for="PMEmail" class="form-control" id="PMEmail"
+                                            name="PMEmail" placeholder="Email">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text-end mt-4">
+                                <button type="submit" id="savebtn" class="btn btn-outline-primary">Save</button>
+                                <a href="/Company/client/budget" id="cnlbtn" class="btn btn-outline-warning">Cancel</a>
+                            </div>
+                        </form>
+                        <div id="divitems">
+                            <div class="d-md-flex justify-content-md-between align-items-md-center text-center text-md-start">
+                                <h1 class="my-5 fw-bold text-capitalize F_20">Add Support Category Budget</h1>
+                            </div>
+                            <div class="row">
+                            <div class="col-lg-12 col-xl-5 mb-4">
+                                <label class="form-label" for="example-email-input">Support Category</label>
+                                <select class="form-select" id="SupportCategoryId1" name="SupportCategoryId1" asp-items="@(new SelectList(Model.SupportCategories,"SupportCategoryId","SupportCategoryName"))">
+                                </select>
+                            </div>
+                            <div class="col-lg-12 col-xl-5 mb-4">
+                                <label class="form-label" for="example-email-input">Support Category budget</label>
+                                <input type="text" class="form-control" id="categoryprice" value="0.00">
+                            </div>
+                            <div class="col-lg-12 col-xl-2 mb-4 my-8">
+                                <button type="button" class="btn btn-primary" id="additemp1">
+                                        <i class="fa fa-plus"></i>Add
+                                    </button>
+                            </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover align-middle"
+                                       aria-describedby="DataTables_Table_3_info" id="tbldata2">
+                                    <thead>
+                                        <tr>
+                                            <th class="table-header">SL No.</th>
+                                            <th class="table-header">Support Category</th>
+                                            <th class="table-header">Support Category Budget</th>
+                                            <th class="table-header">Created Date</th>
+                                            <th class="table-header">Add Item</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbldata1">
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="d-md-flex justify-content-md-between align-items-md-center text-center text-md-start">
+                                <h1 class="my-5 fw-bold text-capitalize F_20">Support Items</h1>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover align-middle"
+                                       aria-describedby="DataTables_Table_3_info" id="DataTables_Table_3_wrapper">
+                                    <thead>
+                                        <tr>
+                                            <th class="table-header">
+                                                SL No.
+                                            </th>
+                                            <th class="table-header">
+                                                Support Category
+                                            </th>
+                                            <th class="table-header">
+                                                Support Item Id
+                                            </th>
+                                            <th class="table-header">
+                                                Support Item Name
+                                            </th>
+
+                                            <th class="table-header">
+                                                Support Category Budget
+                                            </th>
+
+                                            <th class="table-header">
+                                                Actions
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbldata">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>                   
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="modal-block-select2" tabindex="-1" aria-labelledby="modal-block-select2" aria-modal="true" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content" style="width: 200%;height:200%">
+                    <div class="block block-rounded block-transparent mb-0">
+                        <div class="block-header block-header-default">
+                            <h3 class="block-title">Add Support Item</h3>
+                            <div class="block-options">
+                                <button type="button" class="btn-block-option" data-bs-dismiss="modal" aria-label="Close">
+                                    <i class="fa fa-fw fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="block-content">
+                            <div class="row push">
+                                <div class="col-lg-12">
+                                    <div class="col-md-12">
+                                        <label class="form-label" for="example-email-input">Support Item</label>
+                                        <select multiple class="form-select" id="SupportItemId1" style="height: 450px;">
+                                        </select>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-content block-content-full text-end bg-body">
+                            <button type="button" class="btn btn-sm btn-alt-secondary me-1" id="btnclose" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-sm btn-primary" id="btnsave">Perfect</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="~/js/AddClientBudget.js"></script>

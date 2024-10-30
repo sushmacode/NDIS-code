@@ -1,0 +1,274 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+	<title>NDIS</title>
+
+	<meta name="description" content="NDIS">
+	<meta name="author" content="pixelcave">
+	<meta name="robots" content="noindex, nofollow">
+
+	<!-- Open Graph Meta -->
+	<meta property="og:title" content="NDIS">
+	<meta property="og:site_name" content="Dashmix">
+	<meta property="og:description" content="NDIS">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:image" content="">
+
+	<link rel="shortcut icon" href="~/~/assets/media/favicons/favicon.png">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
+	<link rel="icon" type="image/png" sizes="192x192" href="~/~/assets/media//favicons/favicon-192x192.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="~/~/assets/media//favicons/apple-touch-icon-180x180.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="~/assets/media//favicons/apple-touch-icon-180x180.png">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+
+	<style>
+		.custom-shadow {
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+		}
+
+	</style>
+
+
+	<link rel="stylesheet" id="css-main" href="~/assets/css/dashmix.min.css">
+	<link href="~/assets/css/plugins.bundle.css" rel="stylesheet" type="text/css" />
+	<link href="~/assets/css/style.bundle.css" rel="stylesheet" type="text/css">
+
+	<script src="~/assets/js/lib/jquery.min.js"></script>
+	<script src="~/js/global.js"></script>
+
+</head>
+
+<body id="kt_body"
+	  class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled aside-fixed aside-default-enabled">
+	<div class="d-flex flex-column flex-root">
+		<div class="page d-flex flex-row flex-column-fluid">
+			<div id="kt_aside" class="sidbar-shadow  aside aside-default aside-hoverable" data-kt-drawer="true"
+				 data-kt-drawer-name="aside" data-kt-drawer-activate="{default: true, lg: false}"
+				 data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'200px', '300px': '250px'}"
+				 data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_aside_toggle">
+				<!--begin::Brand-->
+				<div class="aside-logo flex-column-auto justify-content-center" id="kt_aside_logo">
+					<!--begin::Logo-->
+					<a href="index.html">
+						<img alt="Logo" src="~/assets/media/photos/ndis.jpg" class="max-h-50px logo-default theme-light-show" width="100" alt="Logo" />
+						<img alt="Logo" src="~/assets/media/logos/logo-default-dark.svg" class="max-h-50px logo-default theme-dark-show" />
+						<img alt="Logo" src="~/assets/media/photos/logo-minimize.png" width="40" class=" mt-8 logo-minimize" />
+					</a>
+					<!--end::Logo-->
+				</div>
+				<!--end::Brand-->
+				<!--begin::Aside menu-->
+				<div class="aside-menu flex-column-fluid ps-3 pe-1">
+					<!--begin::Aside Menu-->
+					<!--begin::Menu-->
+					<div class="menu menu-sub-indention menu-column menu-rounded menu-title-gray-600 menu-icon-gray-500 menu-active-bg menu-state-primary menu-arrow-gray-500 fw-semibold fs-6 my-5 mt-lg-2 mb-lg-0"
+						 id="kt_aside_menu" data-kt-menu="true">
+						<div class="hover-scroll-y mx-4" id="kt_aside_menu_wrapper" data-kt-scroll="true"
+							 data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-height="auto"
+							 data-kt-scroll-wrappers="#kt_aside_menu" data-kt-scroll-offset="20px"
+							 data-kt-scroll-dependencies="#kt_aside_logo, #kt_aside_footer">
+							<!--begin:Menu item-->
+							<div class="menu-item">
+								<a href="/Admin/Home/Index" class="menu-link">
+									<span class="menu-icon">
+										<i class="fa-solid fa-gauge F_20"></i>
+									</span>
+									<span class="menu-title">Dashboards</span>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="/admin/Company/index" class="menu-link">
+									<span class="menu-icon">
+										<i class="fa-solid fa-building F_20"></i>
+									</span>
+									<span class="menu-title">Company</span>
+								</a>
+							</div>
+							<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+								<span class="menu-link">
+									<span class="menu-icon">
+										<i class="fa fa-cog F_20"></i>
+									</span>
+									<span class="menu-title">Settings</span>
+									<span class="menu-arrow"></span>
+								</span>
+								<div class="menu-sub menu-sub-accordion">
+									<div class="menu-item">
+										<a class="menu-link" href="/Admin/Settings/Items">
+											<span class="menu-bullet">
+												<span class="bullet bullet-dot"></span>
+											</span>
+											<span class="menu-title">Support Items</span>
+										</a>
+									</div>
+									<div class="menu-item">
+										<a class="menu-link" href="/Admin/Settings/Prices">
+											<span class="menu-bullet">
+												<span class="bullet bullet-dot"></span>
+											</span>
+											<span class="menu-title">Support Item Prices</span>
+										</a>
+									</div>
+									<div class="menu-item">
+										<a class="menu-link" href="/Admin/Settings/Categories">
+											<span class="menu-bullet">
+												<span class="bullet bullet-dot"></span>
+											</span>
+											<span class="menu-title">Support Item Categories</span>
+										</a>
+									</div>
+																	</div>
+							</div>
+													<!--end:Menu item-->
+						</div>
+
+					</div>
+					<!--end::Menu-->
+				</div>
+				<!--end::Aside menu-->
+				<!--begin::Footer-->
+				<div class="aside-footer flex-column-auto pb-5 d-none" id="kt_aside_footer">
+					<a href="index.html" class="btn btn-light-primary w-100">Button</a>
+				</div>
+				<!--end::Footer-->
+			</div>
+			<div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
+				<!--begin::Header-->
+				<div id="kt_header" class="header" data-kt-sticky="true" data-kt-sticky-name="header"
+					 data-kt-sticky-offset="{default: '200px', lg: '300px'}">
+					<!--begin::Container-->
+					<div class="container-fluid d-flex align-items-stretch justify-content-between px-0">
+						<!--begin::Logo bar-->
+						<div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
+							<!--begin::Aside Toggle-->
+							<div class="d-flex align-items-center d-lg-none">
+								<div class="btn btn-icon btn-active-color-primary ms-n2 me-1" id="kt_aside_toggle">
+									<i class="ki-duotone ki-abstract-14 fs-1">
+										<span class="path1"></span>
+										<span class="path2"></span>
+									</i>
+								</div>
+							</div>
+							<!--end::Aside Toggle-->
+							<!--begin::Logo-->
+							<a href="index.html" class="d-lg-none">
+								<img alt="Logo" src="~/assets/media/logos/logo-compact.svg" class="mh-40px" />
+							</a>
+							<!--end::Logo-->
+							<!--begin::Aside toggler-->
+							<div class="btn btn-icon w-auto ps-0 btn-active-color-primary d-none d-lg-inline-flex ms-5 me-lg-5"
+								 data-kt-toggle="true" data-kt-toggle-state="active" data-kt-toggle-target="body"
+								 data-kt-toggle-name="aside-minimize">
+								<span class="ki-duotone ki-black-left-line fs-1 rotate-180">
+									<i class="fa-solid fa-bars F_24"></i>
+								</span>
+							</div>
+							<!--end::Aside toggler-->
+						</div>
+						<!--end::Logo bar-->
+						<!--begin::Topbar-->
+						<div class="d-flex align-items-stretch justify-content-between flex-lg-grow-1">
+							<div class="d-flex align-items-stretch me-1">
+								<div id="kt_header_search"
+									 class="header-search d-flex align-items-center w-100 w-lg-300px"
+									 data-kt-search-keypress="true" data-kt-search-min-length="2"
+									 data-kt-search-enter="enter" data-kt-search-layout="menu"
+									 data-kt-search-responsive="lg" data-kt-menu-trigger="auto"
+									 data-kt-menu-permanent="true" data-kt-menu-placement="bottom-start">
+									<div data-kt-search-element="toggle"
+										 class="search-toggle-mobile d-flex d-lg-none align-items-center">
+										<div class="d-flex">
+											<i class="ki-duotone ki-magnifier fs-1">
+												<span class="path1"></span>
+												<span class="path2"></span>
+											</i>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--begin::Toolbar wrapper-->
+							<div class="d-flex align-items-stretch flex-shrink-0">
+								<!--begin::Activities-->
+								<!--end::Activities-->
+								<!--end::Quick links-->
+								<!--begin::Chat-->
+								<!--end::Chat-->
+								<!--begin::User-->
+								<div class="d-flex align-items-center ms-2 ms-lg-3" id="kt_header_user_menu_toggle">
+									<!--begin::Menu wrapper-->
+									<div class="cursor-pointer symbol symbol-35px symbol-lg-35px"
+										 data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
+										 data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
+										<span>
+											<i class="fa-solid fa-user-tie F_24"></i>
+										</span>
+									</div>
+									<!--begin::User account menu-->
+									<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg menu-state-color fw-semibold py-4 fs-6 w-275px"
+										 data-kt-menu="true">
+										<!--begin::Menu item-->
+										@* <div class="menu-item px-3">
+										<div class="menu-content d-flex align-items-center px-3">
+										<!--begin::Avatar-->
+										@* <div class="symbol symbol-50px me-5">
+										<img alt="Logo" src="assets/media/avatars/300-1.jpg" />
+
+										</div>
+										<!--end::Avatar-->
+										<!--begin::Username-->
+										<div class="d-flex flex-column">
+										<div class="fw-bold d-flex align-items-center fs-5">Max Smith</div>
+										<a href="#"
+										class="fw-semibold text-muted text-hover-primary fs-7">max@kt.com</a>
+										</div>
+										<!--end::Username-->
+										</div>
+										</div>*@
+										<!--end::Menu item-->
+										<!--begin::Menu separator-->
+										<!--end::Menu separator-->
+										<!--begin::Menu item-->
+										<div class="menu-item">
+											<a href="~/Admin/Account/Logout" class="menu-link">
+												<i class="fa fa-sign-out mx-2" aria-hidden="true"></i>Sign Out
+											</a>
+										</div>
+										<!--end::Menu item-->
+									</div>
+									<!--end::User account menu-->
+									<!--end::Menu wrapper-->
+								</div>
+								<!--end::User -->
+							</div>
+							<!--end::Toolbar wrapper-->
+						</div>
+					</div>
+				</div>
+				<!--begin::Content-->
+				@RenderBody()
+				<!--end::Content-->
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Page JS Code -->
+	@* 	<script src="~/assets/js/lib/jquery.min.js"></script>*@
+	<script src="~/assets/js/dashmix.app.min.js"></script>
+	<script src="~/assets/js/plugins.bundle.js"></script>
+	<script src="~/assets/js/plugins/chart.js/chart.min.js">	</script>
+	<script src="~/assets/js/scripts.bundle.js"></script>
+	<script src="~/assets/js/widgets.bundle.js"></script>
+	<script src="~/assets/js/widgets.js"></script>
+	<script src="~/assets/js/chat.js"></script>
+
+</body>
+
+</html>

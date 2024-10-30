@@ -1,0 +1,323 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model NDIS.Entities.GetEditClientSupportItem
+@{
+    ViewData["Title"] = "EditBudgetItem";
+    Layout = "~/Areas/Company/Views/Shared/_Layout.cshtml";
+}
+
+<main id="main-container">
+
+    <div class="content">
+         
+            <div class="d-md-flex justify-content-md-between align-items-md-center py-3 pt-md-3 pb-md-0 text-center text-md-start">
+                <div>
+                    <h1 class="my-5 ms-5 fw-bold text-capitalize F_28">Add/Edit Item Budget</h1>
+                </div>
+            </div>
+        <div class="post fs-6 d-flex flex-column-fluid" id="kt_post">
+            <div class="container-fluid">
+                <div class="row g-5 gx-xl-10">
+                    <div class="col-xxl-12 mb-md-12 mb-xl-12">
+                <form asp-action="EditBudgetItem" asp-controller="Client" id="EditBudgetItem" method="POST">
+                    @* <h2 class="content-heading pt-0">Basic</h2> *@
+                    @* <div  asp-validation-summary="All" class="invalid-feedback animated"></div> *@
+                    <div class="row push">
+                        <div class="row">
+                            <label class="form-label" for="example-text-input" style="display:none;">Support Item </label>
+                            <input type="text" asp-for="SupportItemName" class="form-control" id="SupportItemName" value="@Model.SupportItemName" disabled style="display:none" name="SupportItemName" placeholder="Proposed Budget">
+                            <label class="form-label" for="example-text-input">@Model.SupportItemName </label>
+
+                        </div>
+                        </div>
+                    <div class="row push">
+                        @Html.HiddenFor(a => a.ClientSupportItemId, new { id = "ClientSupportItemId" })
+                        @Html.HiddenFor(a => a.SupportItemId, new { id = "SupportItemId" })
+                        @Html.HiddenFor(a => a.ClientBudgetId, new { id = "ClientBudgetId" })
+                        @Html.HiddenFor(a => a.DayMandatoryId, new { id = "DayMandatoryId" })
+                        @Html.HiddenFor(a => a.CompanyId)
+                        <div class="col-lg-12 col-xl-6">
+                            <div class="mb-4" style="display:none;">
+                                <label class="form-label" for="example-text-input">Client Support Item No:</label>
+                                <label class="form-label" for="example-text-input">@Model.ClientSupportItemId </label>
+                            </div>
+
+                            <div class="mb-4" style="display:none;">
+                                <label class="form-label" for="example-text-input">Day Hours Count :</label>
+                                <input type="number" asp-for="DayHoursCount" class="form-control" id="DayHoursCount" name="DayHoursCount" placeholder="DayHoursCount">
+                            </div>
+
+                           
+
+                            <div class="mb-4">
+                                <label class="form-label" for="example-email-input">Start Date <span class="text-danger">*</span></label>
+                                <input type="date" asp-for="StartDate" class="form-control" id="StartDate" name="StartDate" placeholder="StartDate">
+                                <span asp-validation-for="StartDate" class="text-danger"></span>
+                            </div>
+                             <div class="mb-4">
+                                <label class="form-label" for="example-email-input">Shift Start Time <span class="text-danger">*</span></label>
+                                <input type="time" asp-for="ShiftStartTime" class="form-control" id="ShiftStartTime" name="ShiftStartTime" placeholder="StartDate">
+                                <span asp-validation-for="ShiftStartTime" class="text-danger"></span>
+                            </div>
+                            
+                            
+                            <div class="mb-4" style="display:none;">
+                                <label class="form-label" for="example-email-input">Support Category Budget <span class="text-danger">*</span></label>
+                                <input type="number" asp-for="ItemBudget" class="form-control" id="ItemBudget" name="ItemBudget" placeholder="Proposed Budget">
+                                <span asp-validation-for="ItemBudget" class="text-danger"></span>
+
+                            </div>
+
+                           
+                            <div class="mb-4">
+                                <label class="form-label" for="example-textarea-input">SpecialConditions</label>
+                                <textarea class="form-control" rows="1" asp-for="SpecialConditions" id="SpecialConditions" name="SpecialConditions" rows="4" placeholder="SpecialConditions.." spellcheck="false"></textarea>
+                                <sider-quick-compose-btn data-gpts-theme="light"></sider-quick-compose-btn>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="form-label" for="example-text-input">Frequency </label>
+                                <select class="form-select" id="ScheduledFrequencies" name="ScheduledFrequencies" asp-items="@(new SelectList(Model.ScheduledFrequencies,"ScheduledFrequencyId","ScheduledFrequency"))">
+                                </select>
+                                @Html.HiddenFor(a => a.FrequencyId)
+                                <span asp-validation-for="FrequencyId" class="text-danger"></span>
+                            </div>
+                                    <div class="mb-4">
+                                        <label class="form-label" for="example-textarea-input">Support Info</label>
+                                        <textarea class="form-control" asp-for="SupportInfo" id="SupportInfo" name="SupportInfo" rows="7" placeholder="Info.." spellcheck="false"></textarea>
+                                        <sider-quick-compose-btn data-gpts-theme="light"></sider-quick-compose-btn>
+                                    </div>
+                         
+                         
+
+                        </div>
+
+
+                        <div class="col-lg-12 col-xl-6">
+                            <div class="mb-4" style="display:none;">
+                                <label class="form-label" for="example-text-input">Client Budget No :</label>
+                                <label class="form-label" for="example-text-input">@Model.ClientBudgetId </label>
+                            </div>
+
+                            
+                            <div class="mb-4">
+                                <label class="form-label" for="example-email-input">End Date <span class="text-danger">*</span></label>
+                                <input type="date" asp-for="EndDate" class="form-control" id="EndDate" name="EndDate" placeholder="EndDate">
+                                <span asp-validation-for="EndDate" class="text-danger"></span>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label" for="example-email-input">Shift End Time <span class="text-danger">*</span></label>
+                                <input type="time" asp-for="ShiftEndTime" class="form-control" id="ShiftEndTime" name="ShiftEndTime" placeholder="StartDate">
+                                <span asp-validation-for="ShiftEndTime" class="text-danger"></span>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label" for="example-email-input">Price Per Hour <span class="text-danger">*</span></label>
+                                <input type="number" asp-for="PricePerHour" class="form-control" id="PricePerHour" name="PricePerHour" placeholder="Price Per Hour">
+                                <span asp-validation-for="PricePerHour" class="text-danger"></span>
+
+                            </div>
+
+                                    <div class="mb-4">
+                                        <label class="form-label" for="val-skill">Status </label>
+                                        <select class="form-select" asp-for="IsActive" id="IsActive" name="IsActive" fdprocessedid="xkq1ao" aria-describedby="val-skill-error" aria-invalid="true">
+                                            <option value="1">Active</option>
+                                            <option value="0">Inactive</option>
+                                        </select>
+
+                                    </div>
+                           
+                            <div class="mb-4">
+                                <label class="form-label" for="example-text-input">WeekDay </label>
+                                        <select id="WeekArray" rows="1" name="WeekArray" multiple asp-for="WeekArray" class="form-control" style="height: 170px;">
+                                    <option value="1">Monday</option>
+                                    <option value="2">Tuesday</option>
+                                    <option value="3">Wednesday</option>
+                                    <option value="4">Thursday</option>
+                                    <option value="5">Friday</option>
+                                    <option value="6">Saturday</option>
+                                    <option value="7">Sunday</option>
+                                </select>
+                                @Html.HiddenFor(a => a.WeekDayIds)
+                                <span asp-validation-for="WeekDayIds" class="text-danger"></span>
+                            </div>
+                            <div class="mb-4" style="display:none;">
+                                <label class="form-label" for="val-skill">Provider </label>
+                                <select class="form-select" asp-for="ProviderId" id="ProviderId" name="ProviderId" asp-items="@(new SelectList(Model.Providers,"ProviderId","ProviderName"))">
+                                    
+                                </select>
+
+                            </div>
+                                    <div class="col-lg-12 d-flex justify-content-end mt-4">
+                                        <button type="button" id="savebtn" class="btn btn-outline-primary me-2">Save</button>
+                                        <a href="/Company/client/addClientbudget?id=@Model.ClientBudgetId" id="cnlbtn" class="btn btn-outline-warning">Cancel</a>
+                                    </div>
+                           
+                           
+                           
+                           
+                        </div>
+                    </div>
+                    
+                </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+    </div>
+</main>
+
+
+
+
+<script>
+
+    $(() => {
+    
+    //var arraylist = $("#WeekArray").val();
+            
+        var IsMultiple = 1;
+            
+        if ($("#FrequencyId").val()!=null) {
+            $('#ScheduledFrequencies option').each(function (index, element) {
+                var value = $(element).val();
+                if (value.startsWith(@Model.FrequencyId+"_")) {
+                    $("#ScheduledFrequencies").val(value);
+                }
+            });
+            $("#FrequencyId").val(@Model.FrequencyId);
+        }
+        
+
+
+        $(document).on("change", '#ScheduledFrequencies', function (event) {
+            var ScheduledFrequency = $("#ScheduledFrequencies").val();
+           
+            var frequencyid = ScheduledFrequency.split('_')[0];
+            IsMultiple = ScheduledFrequency.split('_')[1];
+            $("#FrequencyId").val(frequencyid);
+            
+        });
+
+        $(document).on("change", '#WeekArray', function (event) {
+            var ScheduledFrequency = $("#ScheduledFrequencies").val();
+
+            var frequencyid = ScheduledFrequency.split('_')[0];
+            IsMultiple = ScheduledFrequency.split('_')[1];
+            
+
+        });
+
+        $(document).on("click", '#savebtn', function (event) {
+            var array = $("#WeekArray").val();
+            var DayMandatoryId = $("#DayMandatoryId").val();
+            $("#WeekDayIds").val(array);
+            var ScheduledFrequency = $("#ScheduledFrequencies").val();
+            
+            var frequencyid = ScheduledFrequency.split('_')[0];
+            IsMultiple = ScheduledFrequency.split('_')[1];
+            //alert(IsMultiple)
+            //alert(array.length)
+            //alert(DayMandatoryId)
+            var isvalid = 0;
+            if (IsMultiple == 0 && array.length > 1) {
+                isvalid = 1;
+                alert('Please select one day')
+            } else if (frequencyid > 4) {
+                
+                if (frequencyid == 5) {
+                    if (array.length != 2) {
+                        isvalid = 1;
+                        alert('Please select two days')
+                    }
+                } else if (frequencyid == 6) {
+                    if (array.length != 3) {
+                        isvalid = 1;
+                        alert('Please select three days')
+                    }
+                } else if (frequencyid != 7) {
+                    if (array.length != 4) {
+                        isvalid = 1;
+                        alert('Please select four days')
+                    }
+                } else if (frequencyid != 8) {
+                    if (array.length != 5) {
+                        isvalid = 1;
+                        alert('Please select five days')
+                    }
+                } else if (frequencyid != 9) {
+                    if (array.length != 6) {
+                        isvalid = 1;
+                        alert('Please select five days')
+                    }
+                }
+            }
+            if (isvalid == 0) {
+                //alert(array)
+                //alert(DayMandatoryId)
+                //alert($("#WeekDayIds").val())
+                if (DayMandatoryId == 0) {
+                    $("#EditBudgetItem").submit();
+                }
+                else if (DayMandatoryId == 1) {
+                    //alert(isValueInObject(array, "6"))
+                    //alert(typeof(array))
+                    //alert(array.contains(7))
+                    if (isValueInObject(array, "6") || isValueInObject(array, "7")) {
+                        alert('Please select only week day.');
+                    }
+                    else {
+                        $("#EditBudgetItem").submit();
+                    }
+                }
+                else if (DayMandatoryId == 2) {
+                    if (!isValueInObject(array, "6")) {
+                        alert('Please select only Saturday.');
+                    }
+                    else {
+                        $("#EditBudgetItem").submit();
+                    }
+                }
+                else if (DayMandatoryId == 3) {
+                    if (!isValueInObject(array, "7")) {
+                        alert('Please select only Sunday.');
+                    }
+                    else {
+                        $("#EditBudgetItem").submit();
+                    }
+                }
+                else if (DayMandatoryId == 4) {
+                    $("#EditBudgetItem").submit();
+                }
+            }
+        });
+
+        $('#WeekArray').bind("click", function (event, target) {
+
+            event.preventDefault();
+            var CurrentIndex = event.target.selectedIndex == undefined ? $(event.target).index() : event.target.selectedIndex
+            var CurrentOption = $("option:eq(" + CurrentIndex + ")", $(this));
+            if ($(CurrentOption).attr('data-selected') == undefined || $(CurrentOption).attr('data-selected') == 'false') {
+                $(CurrentOption).attr('data-selected', true);
+            }
+            else {
+                $(CurrentOption).prop('selected', false).attr('data-selected', false);
+            }
+
+            $("option", $(this)).not(CurrentOption).each(function (Index, OtherOption) {
+                $(OtherOption).prop('selected', ($(OtherOption).attr('data-selected') == 'true') ? true : false);
+            });
+            return false;
+        });
+        function isValueInObject(obj, value) {
+            for (var key in obj) {
+                if (obj.hasOwnProperty(key) && obj[key] === value) {
+                    return true;
+                }
+            }
+            return false;
+        }
+    });
+
+
+
+</script>

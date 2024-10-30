@@ -1,0 +1,95 @@
+﻿@model NDISBudget.Areas.Admin.Data.LoginModel
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <title>NDIS</title>
+
+    <meta name="description" content="NDIS">
+    <meta name="author" content="pixelcave">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Open Graph Meta -->
+    <meta property="og:title" content="NDIS">
+    <meta property="og:site_name" content="Dashmix">
+    <meta property="og:description" content="NDIS">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+
+    <link rel="shortcut icon" href="~/assets/media/favicons/favicon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="~/assets/media/favicons/favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="~/assets/media/favicons/apple-touch-icon-180x180.png">
+    <link rel="stylesheet" id="css-main" href="~/assets/css/dashmix.min.css">
+</head>
+
+<body>
+    <div id="page-container">
+        <main id="main-container">
+            <div class="hero-static col-md-15 d-flex align-items-center bg-body-extra-light">
+                <div class="p-3 w-100">
+                    <!-- Header -->
+                    <div class="mb-3 text-center">
+                        <a>
+                            <img src="~/assets/media/photos/ndis.jpg" width="140" height="90" alt="">
+                        </a>
+                        <p class="text-uppercase fw-bold fs-sm text-muted">Admin Sign In</p>
+                    </div>
+                    <!-- END Header -->
+                    <div class="row g-0 justify-content-center">
+                        <div class="col-sm-5 col-xl-3">
+                            <form class="js-validation-signin" asp-action="Login" method="POST">
+                                @if (!string.IsNullOrEmpty(ViewBag.Message))
+                                {
+                                    <span class="text-danger">
+                                        @ViewBag.Message
+                                    </span>
+                                }
+                                <div class="py-3">
+                                    <div class="mb-4">
+                                        <input type="text" asp-for="UserName" class="form-control form-control-lg form-control-alt" id="UserName" name="UserName" placeholder="Username">
+                                        <span asp-validation-for="UserName" class="text-danger"></span>
+                                    </div>
+                                    <div class="mb-4">
+                                        <input type="password" asp-for="Password" class="form-control form-control-lg form-control-alt" id="Password" name="Password" placeholder="Password">
+                                        <span asp-validation-for="Password" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <button type="submit" class="btn w-100 btn-lg btn-hero btn-primary" >
+                                        <i class="fa fa-fw fa-sign-in-alt opacity-50 me-1"></i> Sign In
+                                    </button>
+                                    
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </div>
+    </main>
+    </div>
+    <!-- END Page Container -->
+    <script src="~/assets/js/dashmix.app.min.js"></script>
+
+    <!-- jQuery (required for jQuery Validation plugin) -->
+    <script src="~/assets/js/lib/jquery.min.js"></script>
+
+    <!-- Page JS Plugins -->
+    <script src="~/assets/js/plugins/jquery-validation/jquery.validate.min.js"></script>
+
+    <!-- Page JS Code -->
+    <script src="~/assets/js/pages/op_auth_signin.min.js"></script>
+    <script src="~/js/global.js"></script>
+    <script>
+
+       
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+﻿
+@{
+    ViewData["Title"] = "Categories";
+    Layout = "~/Areas/Company/Views/Shared/_Layout.cshtml";
+}
+
+
+<main id="main-container">
+
+    <div class="content">
+        <div class="block block-rounded">
+            <div class="block-header block-header-default">
+                <h3 class="block-title">Support Item Categories</h3>
+            </div>
+        </div>
+        <div class="content">
+
+            <div class="block block-rounded">
+                <div class="block-header block-header-default">
+                    <input type="hidden" id="CompanyId" name="CompanyId" value="@ViewBag.CompanyId" />
+                    <div class="col-sm-12 col-md-6">
+                        @* <label class="form-label" for="example-text-input">Search</label> *@
+                        <input type="text" class="form-control" id="SearchStr" name="SearchStr" placeholder="Search">
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <label class="form-label" for="example-text-input"></label>
+                        <button type="button" id="shwbtn" class="btn btn-primary ">Search</button>
+                        <button type="button" id="shwallbtn" class="btn btn-primary ">Show all</button>
+                        <button type="button" id="addentitry" class="btn btn-primary ">Add</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-4 pull-right">
+                        Total: <span id="totalrec"></span>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                        <div id="showpageinfo" class="col-auto">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4 pull-left">
+                        <select class="form-select" id="ddlpagesize">
+                            <option>25</option>
+                            <option>50</option>
+                            <option>75</option>
+                            <option>100</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="block-content block-content-full">
+                    <div id="DataTables_Table_3_wrapper" class="dataTables_wrapper dt-bootstrap5 no-footer">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <table class="table clientsDatatable" id="tbldata1" aria-describedby="DataTables_Table_3_info">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                Name
+                                            </th>
+                                            <th>
+                                                Status
+                                            </th>
+                                            <th>
+                                                Created Date
+                                            </th>
+                                            <th>
+                                                Actions
+                                            </th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody id="tbldata">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="px-2 my-2 pull-right">
+                                <ul class="pagination m-0">
+                                    <li class="active"><a href="#"><i class="fas fa-angle-double-left"></i></a></li>
+                                    <li><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#"><i class="fas fa-angle-double-right"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<script src="~/js/settings.js"></script>
+

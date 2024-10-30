@@ -1,0 +1,12 @@
+2024-09-06 08:05:00.180 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-06 08:05:00.667 +05:00 [INF] HTTP GET /Company/Client/index responded 200 in 497.1438 ms
+2024-09-06 08:05:00.776 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 7.7694 ms
+2024-09-06 08:05:00.779 +05:00 [INF] HTTP GET /assets/css/plugins.bundle.css responded 304 in 10.9575 ms
+2024-09-06 08:05:00.779 +05:00 [INF] HTTP GET /assets/css/style.bundle.css responded 304 in 10.9578 ms
+2024-09-06 08:05:00.984 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 3.8747 ms
+2024-09-06 08:05:01.023 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.6590 ms
+2024-09-06 08:05:04.580 +05:00 [INF] HTTP GET /Company/Client/Budget responded 200 in 40.6881 ms
+2024-09-06 08:05:04.677 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.7799 ms
+2024-09-06 08:05:04.755 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.6739 ms
+2024-09-06 08:05:04.809 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.7290 ms
+2024-09-06 08:05:07.111 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 2935.0297 ms

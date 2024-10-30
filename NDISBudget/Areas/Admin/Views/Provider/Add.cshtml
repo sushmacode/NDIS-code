@@ -1,0 +1,72 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model NDIS.Entities.AdminAddProvider
+@{
+    ViewData["Title"] = "Add";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<main id="main-container">
+
+    <div class="content">
+        <div class="block block-rounded">
+            <div class="block-header block-header-default">
+                <h3 class="block-title">Add Provider</h3>
+            </div>
+            <div class="block-content">
+                <form asp-action="Add"  method="POST">
+                    @* <h2 class="content-heading pt-0">Basic</h2> *@
+                    @* <div  asp-validation-summary="All" class="invalid-feedback animated"></div> *@
+                    <div class="row push">
+                        @Html.HiddenFor(a => a.ProviderId)
+                        <div class="col-lg-8 col-xl-5">
+                            <div class="mb-4">
+                                <label class="form-label" for="example-text-input">Company Name <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" asp-for="ProviderName" id="ProviderName" name="ProviderName" placeholder="Enter Provider Name">
+                                <span asp-validation-for="ProviderName" class="text-danger"></span>
+                            </div>
+                           
+
+
+
+
+                            <div class="mb-4">
+                                <label class="form-label" for="example-email-input">Contact Number <span class="text-danger">*</span></label>
+                                <input type="number" asp-for="ContactNumber" class="form-control" id="ContactNumber" name="ContactNumber" placeholder="Contact Number">
+                                <span asp-validation-for="ContactNumber" class="text-danger"></span>
+
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label" for="example-email-input">Email</label>
+                                <input type="email" asp-for="EmailId" class="form-control" id="EmailId" name="EmailId" placeholder="Emai Input">
+                            </div>
+
+                            
+
+                            <div class="mb-4">
+                                <label class="form-label" for="example-textarea-input">Address</label>
+                                <textarea class="form-control" asp-for="Address" id="Address" name="Address" rows="4" placeholder="Client Address.." spellcheck="false"></textarea>
+                                <sider-quick-compose-btn data-gpts-theme="light"></sider-quick-compose-btn>
+                            </div>
+
+
+                            <div class="mb-4">
+                                <label class="form-label" for="val-skill">Status </label>
+                                <select class="form-select" asp-for="IsActive" id="IsActive" name="IsActive" fdprocessedid="xkq1ao" aria-describedby="val-skill-error" aria-invalid="true">
+                                    <option value="1">Active</option>
+                                    <option value="0">Inactive</option>
+                                </select>
+
+                            </div>
+                            <div class="mb-4">
+                                <button type="submit" id="savebtn" class="btn btn-primary ">Save</button>
+                                <button type="button" href="/admin/provider/index" id="cnlbtn" class="btn btn-warning">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+

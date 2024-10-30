@@ -1,0 +1,26 @@
+C:\Users\Lenovo\OneDrive\Desktop\sushma project code\NDISBudget\NDIS.Entities\bin\Debug\net8.0\NDIS.Entities.deps.json
+c:\Users\Lenovo\OneDrive\Desktop\sushma project code\NDISBudget\NDIS.Entities\bin\Debug\net8.0\NDIS.Entities.dll
+c:\Users\Lenovo\OneDrive\Desktop\sushma project code\NDISBudget\NDIS.Entities\bin\Debug\net8.0\NDIS.Entities.pdb
+c:\Users\Lenovo\OneDrive\Desktop\sushma project code\NDISBudget\NDIS.Entities\obj\Debug\net8.0\NDIS.Entities.csproj.AssemblyReference.cache
+c:\Users\Lenovo\OneDrive\Desktop\sushma project code\NDISBudget\NDIS.Entities\obj\Debug\net8.0\NDIS.Entities.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\Lenovo\OneDrive\Desktop\sushma project code\NDISBudget\NDIS.Entities\obj\Debug\net8.0\NDIS.Entities.AssemblyInfoInputs.cache
+c:\Users\Lenovo\OneDrive\Desktop\sushma project code\NDISBudget\NDIS.Entities\obj\Debug\net8.0\NDIS.Entities.AssemblyInfo.cs
+c:\Users\Lenovo\OneDrive\Desktop\sushma project code\NDISBudget\NDIS.Entities\obj\Debug\net8.0\NDIS.Entities.csproj.CoreCompileInputs.cache
+c:\Users\Lenovo\OneDrive\Desktop\sushma project code\NDISBudget\NDIS.Entities\obj\Debug\net8.0\NDIS.Entities.sourcelink.json
+c:\Users\Lenovo\OneDrive\Desktop\sushma project code\NDISBudget\NDIS.Entities\obj\Debug\net8.0\NDIS.Entities.dll
+c:\Users\Lenovo\OneDrive\Desktop\sushma project code\NDISBudget\NDIS.Entities\obj\Debug\net8.0\refint\NDIS.Entities.dll
+c:\Users\Lenovo\OneDrive\Desktop\sushma project code\NDISBudget\NDIS.Entities\obj\Debug\net8.0\NDIS.Entities.pdb
+C:\Users\Lenovo\OneDrive\Desktop\sushma project code\NDISBudget\NDIS.Entities\obj\Debug\net8.0\ref\NDIS.Entities.dll
+C:\Users\Sushma\Downloads\NDISBudget\NDISBudget\NDIS.Entities\bin\Debug\net8.0\NDIS.Entities.deps.json
+C:\Users\Sushma\Downloads\NDISBudget\NDISBudget\NDIS.Entities\bin\Debug\net8.0\NDIS.Entities.dll
+C:\Users\Sushma\Downloads\NDISBudget\NDISBudget\NDIS.Entities\bin\Debug\net8.0\NDIS.Entities.pdb
+C:\Users\Sushma\Downloads\NDISBudget\NDISBudget\NDIS.Entities\obj\Debug\net8.0\NDIS.Entities.csproj.AssemblyReference.cache
+C:\Users\Sushma\Downloads\NDISBudget\NDISBudget\NDIS.Entities\obj\Debug\net8.0\NDIS.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sushma\Downloads\NDISBudget\NDISBudget\NDIS.Entities\obj\Debug\net8.0\NDIS.Entities.AssemblyInfoInputs.cache
+C:\Users\Sushma\Downloads\NDISBudget\NDISBudget\NDIS.Entities\obj\Debug\net8.0\NDIS.Entities.AssemblyInfo.cs
+C:\Users\Sushma\Downloads\NDISBudget\NDISBudget\NDIS.Entities\obj\Debug\net8.0\NDIS.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Sushma\Downloads\NDISBudget\NDISBudget\NDIS.Entities\obj\Debug\net8.0\NDIS.Entities.sourcelink.json
+C:\Users\Sushma\Downloads\NDISBudget\NDISBudget\NDIS.Entities\obj\Debug\net8.0\NDIS.Entities.dll
+C:\Users\Sushma\Downloads\NDISBudget\NDISBudget\NDIS.Entities\obj\Debug\net8.0\refint\NDIS.Entities.dll
+C:\Users\Sushma\Downloads\NDISBudget\NDISBudget\NDIS.Entities\obj\Debug\net8.0\NDIS.Entities.pdb
+C:\Users\Sushma\Downloads\NDISBudget\NDISBudget\NDIS.Entities\obj\Debug\net8.0\ref\NDIS.Entities.dll

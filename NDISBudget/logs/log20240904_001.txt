@@ -1,0 +1,1182 @@
+2024-09-04 10:01:39.994 +05:00 [ERR] Hosting failed to start
+System.IO.IOException: Failed to bind to address http://127.0.0.1:5128: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+ ---> System.Net.Sockets.SocketException (10048): Only one usage of each socket address (protocol/network address/port) is normally permitted.
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2024-09-04 10:05:29.351 +05:00 [ERR] Hosting failed to start
+System.IO.IOException: Failed to bind to address http://127.0.0.1:5128: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+ ---> System.Net.Sockets.SocketException (10048): Only one usage of each socket address (protocol/network address/port) is normally permitted.
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2024-09-04 10:09:41.773 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 10:09:43.838 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 2066.3948 ms
+2024-09-04 10:09:58.573 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 208.2343 ms
+2024-09-04 10:10:01.942 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 197.4642 ms
+2024-09-04 10:10:05.275 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 194.6303 ms
+2024-09-04 10:10:05.326 +05:00 [INF] HTTP GET /assets/css/dashmix.min.css responded 200 in 27.9098 ms
+2024-09-04 10:10:05.358 +05:00 [INF] HTTP GET /js/global.js responded 200 in 35.5080 ms
+2024-09-04 10:10:05.372 +05:00 [INF] HTTP GET /assets/js/lib/jquery.min.js responded 200 in 59.0244 ms
+2024-09-04 10:10:05.372 +05:00 [INF] HTTP GET /assets/js/dashmix.app.min.js responded 200 in 49.3132 ms
+2024-09-04 10:10:05.382 +05:00 [INF] HTTP GET /assets/media/photos/ndis1.png responded 200 in 2.2183 ms
+2024-09-04 10:10:05.398 +05:00 [INF] HTTP GET /assets/fonts/inter/inter-v11-latin-500.woff2 responded 200 in 10.2703 ms
+2024-09-04 10:10:05.398 +05:00 [INF] HTTP GET /assets/fonts/inter/inter-v11-latin-700.woff2 responded 200 in 10.3308 ms
+2024-09-04 10:10:05.399 +05:00 [INF] HTTP GET /assets/fonts/fontawesome/fa-solid-900.woff2 responded 200 in 11.1257 ms
+2024-09-04 10:10:05.399 +05:00 [INF] HTTP GET /assets/fonts/inter/inter-v11-latin-600.woff2 responded 200 in 11.2481 ms
+2024-09-04 10:10:05.401 +05:00 [INF] HTTP GET /assets/fonts/fontawesome/fa-regular-400.woff2 responded 200 in 12.5272 ms
+2024-09-04 10:10:05.405 +05:00 [INF] HTTP GET /assets/js/plugins/chart.js/chart.min.js responded 200 in 82.6571 ms
+2024-09-04 10:10:05.414 +05:00 [INF] HTTP GET /assets/fonts/inter/inter-v11-latin-regular.woff2 responded 200 in 13.8818 ms
+2024-09-04 10:10:05.781 +05:00 [INF] HTTP GET /assets/media/favicons/favicon.png responded 200 in 10.7453 ms
+2024-09-04 10:10:11.027 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 197.2188 ms
+2024-09-04 10:10:11.042 +05:00 [INF] HTTP GET /assets/js/lib/jquery.min.js responded 200 in 2.0375 ms
+2024-09-04 10:10:11.042 +05:00 [INF] HTTP GET /js/global.js responded 200 in 1.6202 ms
+2024-09-04 10:10:11.042 +05:00 [INF] HTTP GET /assets/js/dashmix.app.min.js responded 200 in 1.6707 ms
+2024-09-04 10:10:11.042 +05:00 [INF] HTTP GET /assets/js/plugins/chart.js/chart.min.js responded 200 in 1.9139 ms
+2024-09-04 10:10:11.043 +05:00 [INF] HTTP GET /assets/css/dashmix.min.css responded 200 in 3.0858 ms
+2024-09-04 10:10:11.089 +05:00 [INF] HTTP GET /assets/media/photos/ndis1.png responded 200 in 2.5052 ms
+2024-09-04 10:10:11.254 +05:00 [INF] HTTP GET /assets/fonts/fontawesome/fa-regular-400.woff2 responded 200 in 0.5440 ms
+2024-09-04 10:10:11.254 +05:00 [INF] HTTP GET /assets/fonts/inter/inter-v11-latin-700.woff2 responded 200 in 0.3335 ms
+2024-09-04 10:10:11.254 +05:00 [INF] HTTP GET /assets/fonts/fontawesome/fa-solid-900.woff2 responded 200 in 0.8746 ms
+2024-09-04 10:10:11.274 +05:00 [INF] HTTP GET /assets/fonts/inter/inter-v11-latin-500.woff2 responded 200 in 0.4975 ms
+2024-09-04 10:10:11.275 +05:00 [INF] HTTP GET /assets/fonts/inter/inter-v11-latin-regular.woff2 responded 200 in 0.3198 ms
+2024-09-04 10:10:11.275 +05:00 [INF] HTTP GET /assets/fonts/inter/inter-v11-latin-600.woff2 responded 200 in 0.3281 ms
+2024-09-04 10:10:11.590 +05:00 [INF] HTTP GET /assets/media/favicons/favicon.png responded 200 in 0.8689 ms
+2024-09-04 10:10:15.317 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 195.1368 ms
+2024-09-04 10:10:18.037 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 195.2531 ms
+2024-09-04 10:10:23.553 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 195.7092 ms
+2024-09-04 10:10:25.899 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 197.0257 ms
+2024-09-04 10:10:25.934 +05:00 [INF] HTTP GET /assets/css/dashmix.min.css responded 200 in 6.4503 ms
+2024-09-04 10:10:25.934 +05:00 [INF] HTTP GET /js/global.js responded 200 in 0.6161 ms
+2024-09-04 10:10:25.934 +05:00 [INF] HTTP GET /assets/js/lib/jquery.min.js responded 200 in 0.6218 ms
+2024-09-04 10:10:25.935 +05:00 [INF] HTTP GET /assets/js/plugins/chart.js/chart.min.js responded 200 in 0.8390 ms
+2024-09-04 10:10:25.935 +05:00 [INF] HTTP GET /assets/js/dashmix.app.min.js responded 200 in 0.8790 ms
+2024-09-04 10:10:25.958 +05:00 [INF] HTTP GET /assets/media/photos/ndis1.png responded 200 in 1.8264 ms
+2024-09-04 10:10:25.970 +05:00 [INF] HTTP GET /assets/fonts/inter/inter-v11-latin-500.woff2 responded 200 in 0.2964 ms
+2024-09-04 10:10:25.970 +05:00 [INF] HTTP GET /assets/fonts/fontawesome/fa-regular-400.woff2 responded 200 in 0.3533 ms
+2024-09-04 10:10:25.970 +05:00 [INF] HTTP GET /assets/fonts/inter/inter-v11-latin-700.woff2 responded 200 in 0.3488 ms
+2024-09-04 10:10:25.971 +05:00 [INF] HTTP GET /assets/fonts/inter/inter-v11-latin-regular.woff2 responded 200 in 0.2332 ms
+2024-09-04 10:10:25.971 +05:00 [INF] HTTP GET /assets/fonts/inter/inter-v11-latin-600.woff2 responded 200 in 0.3300 ms
+2024-09-04 10:10:25.971 +05:00 [INF] HTTP GET /assets/fonts/fontawesome/fa-solid-900.woff2 responded 200 in 0.9483 ms
+2024-09-04 10:10:26.016 +05:00 [INF] HTTP GET /assets/media/favicons/favicon.png responded 200 in 0.4547 ms
+2024-09-04 10:12:16.218 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 235.2428 ms
+2024-09-04 10:15:58.305 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 10:16:00.315 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 2011.6628 ms
+2024-09-04 10:16:00.361 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 5.4252 ms
+2024-09-04 10:16:00.361 +05:00 [INF] HTTP GET /assets/css/plugins.bundle.css responded 404 in 5.4156 ms
+2024-09-04 10:16:00.361 +05:00 [INF] HTTP GET /assets/css/style.bundle.css responded 404 in 5.4157 ms
+2024-09-04 10:16:00.537 +05:00 [INF] HTTP GET /~/assets/media/favicons/favicon.png responded 404 in 5.4611 ms
+2024-09-04 10:16:00.547 +05:00 [INF] HTTP GET /~/assets/media//favicons/favicon-192x192.png responded 404 in 2.9290 ms
+2024-09-04 10:32:21.378 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 10:32:24.505 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 3131.7963 ms
+2024-09-04 10:32:24.571 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 11.6720 ms
+2024-09-04 10:32:24.628 +05:00 [INF] HTTP GET /assets/css/plugins.bundle.css responded 200 in 66.5890 ms
+2024-09-04 10:32:24.635 +05:00 [INF] HTTP GET /assets/css/style.bundle.css responded 200 in 76.5960 ms
+2024-09-04 10:32:24.779 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 6.2128 ms
+2024-09-04 10:32:24.877 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 3.0216 ms
+2024-09-04 10:35:12.743 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 10:35:14.754 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 2013.6762 ms
+2024-09-04 10:35:14.799 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 5.1932 ms
+2024-09-04 10:35:14.815 +05:00 [INF] HTTP GET /Company/Home/assets/media/avatars/300-11.jpg responded 404 in 5.7232 ms
+2024-09-04 10:35:14.815 +05:00 [INF] HTTP GET /Company/Home/assets/media/avatars/300-2.jpg responded 404 in 5.7261 ms
+2024-09-04 10:35:14.815 +05:00 [INF] HTTP GET /Company/Home/assets/media/avatars/300-12.jpg responded 404 in 4.5466 ms
+2024-09-04 10:38:10.520 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 10:38:12.603 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 2084.5816 ms
+2024-09-04 10:38:12.685 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 10.5513 ms
+2024-09-04 10:39:13.044 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 10:39:15.051 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 2010.9851 ms
+2024-09-04 10:39:15.128 +05:00 [INF] HTTP GET /Company/Home/assets/media/avatars/300-12.jpg responded 404 in 4.7064 ms
+2024-09-04 10:39:15.128 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 4.7064 ms
+2024-09-04 10:39:15.128 +05:00 [INF] HTTP GET /Company/Home/assets/media/avatars/300-2.jpg responded 404 in 4.7061 ms
+2024-09-04 10:39:15.128 +05:00 [INF] HTTP GET /Company/Home/assets/media/avatars/300-11.jpg responded 404 in 4.7093 ms
+2024-09-04 10:40:07.696 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 10:40:09.862 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 2170.9004 ms
+2024-09-04 10:40:09.917 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 3.7808 ms
+2024-09-04 10:40:09.934 +05:00 [INF] HTTP GET /Company/Home/assets/media/avatars/300-11.jpg responded 404 in 10.7243 ms
+2024-09-04 10:40:09.934 +05:00 [INF] HTTP GET /Company/Home/assets/media/avatars/300-12.jpg responded 404 in 8.7148 ms
+2024-09-04 10:40:09.934 +05:00 [INF] HTTP GET /Company/Home/assets/media/avatars/300-2.jpg responded 404 in 9.7640 ms
+2024-09-04 10:41:02.216 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 10:41:04.086 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 1875.1782 ms
+2024-09-04 10:41:04.137 +05:00 [INF] HTTP GET /Company/Home/assets/media/avatars/300-11.jpg responded 404 in 20.6698 ms
+2024-09-04 10:41:04.137 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 20.6667 ms
+2024-09-04 10:41:04.137 +05:00 [INF] HTTP GET /Company/Home/assets/media/avatars/300-12.jpg responded 404 in 5.4273 ms
+2024-09-04 10:41:04.143 +05:00 [INF] HTTP GET /Company/Home/assets/media/avatars/300-2.jpg responded 404 in 25.6389 ms
+2024-09-04 10:43:51.382 +05:00 [INF] HTTP GET /Company/Client/Budget responded 302 in 43.0755 ms
+2024-09-04 10:43:51.391 +05:00 [INF] HTTP GET /Account/Login responded 404 in 1.7301 ms
+2024-09-04 10:43:54.182 +05:00 [INF] HTTP GET /Company/Client/addClientbudget responded 302 in 8.5501 ms
+2024-09-04 10:43:54.188 +05:00 [INF] HTTP GET /Account/Login responded 404 in 0.7658 ms
+2024-09-04 10:44:29.656 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 10:44:32.853 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 3202.2596 ms
+2024-09-04 10:44:32.900 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 3.7528 ms
+2024-09-04 10:44:32.910 +05:00 [INF] HTTP GET /Company/Home/assets/media/avatars/300-11.jpg responded 404 in 4.2898 ms
+2024-09-04 10:44:32.911 +05:00 [INF] HTTP GET /Company/Home/assets/media/avatars/300-2.jpg responded 404 in 1.6119 ms
+2024-09-04 10:44:32.916 +05:00 [INF] HTTP GET /Company/Home/assets/media/avatars/300-12.jpg responded 404 in 3.9928 ms
+2024-09-04 10:44:34.614 +05:00 [INF] HTTP GET /Company/Client/Budget responded 302 in 7.7561 ms
+2024-09-04 10:44:34.620 +05:00 [INF] HTTP GET /Account/Login responded 404 in 0.6114 ms
+2024-09-04 10:44:51.273 +05:00 [INF] HTTP GET /Company/Account/Logout responded 302 in 79.3148 ms
+2024-09-04 10:44:51.637 +05:00 [INF] HTTP GET /Company/Account/Login responded 200 in 357.0184 ms
+2024-09-04 10:44:51.724 +05:00 [INF] HTTP GET /assets/js/plugins/jquery-validation/jquery.validate.min.js responded 404 in 1.0230 ms
+2024-09-04 10:44:51.772 +05:00 [INF] HTTP GET /assets/js/pages/op_auth_signin.min.js responded 200 in 48.2115 ms
+2024-09-04 10:44:51.779 +05:00 [INF] HTTP GET /assets/media/photos/ndis.jpg responded 200 in 56.4871 ms
+2024-09-04 10:44:53.231 +05:00 [INF] HTTP POST /Company/Account/Login responded 302 in 406.5562 ms
+2024-09-04 10:44:53.459 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 222.7258 ms
+2024-09-04 10:44:53.510 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 1.6277 ms
+2024-09-04 10:44:53.518 +05:00 [INF] HTTP GET /Company/Home/assets/media/avatars/300-2.jpg responded 404 in 0.8640 ms
+2024-09-04 10:44:53.518 +05:00 [INF] HTTP GET /Company/Home/assets/media/avatars/300-11.jpg responded 404 in 0.8883 ms
+2024-09-04 10:44:53.518 +05:00 [INF] HTTP GET /Company/Home/assets/media/avatars/300-12.jpg responded 404 in 0.8668 ms
+2024-09-04 10:44:56.618 +05:00 [INF] HTTP GET /Company/Client/addClientbudget responded 200 in 1558.7071 ms
+2024-09-04 10:44:56.646 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.7692 ms
+2024-09-04 10:44:56.698 +05:00 [INF] HTTP GET /js/AddClientBudget.js responded 200 in 52.7333 ms
+2024-09-04 10:44:58.863 +05:00 [INF] HTTP GET /Company/Schedule/BudgetSchedule1 responded 200 in 462.6279 ms
+2024-09-04 10:44:58.912 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.5683 ms
+2024-09-04 10:44:58.983 +05:00 [INF] HTTP GET /js/BudgetSchedule1.js responded 200 in 58.6513 ms
+2024-09-04 10:45:00.774 +05:00 [INF] HTTP GET /Company/Client/Add responded 200 in 321.3566 ms
+2024-09-04 10:45:00.828 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.7072 ms
+2024-09-04 10:45:01.942 +05:00 [INF] HTTP GET /Company/Client/Budget responded 200 in 34.1303 ms
+2024-09-04 10:45:01.984 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.5711 ms
+2024-09-04 10:45:01.999 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.8140 ms
+2024-09-04 10:45:02.008 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.8703 ms
+2024-09-04 10:45:02.064 +05:00 [INF] HTTP GET /js/clientbudget.js responded 200 in 71.2643 ms
+2024-09-04 10:45:03.556 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 243.0074 ms
+2024-09-04 10:45:03.603 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.4792 ms
+2024-09-04 10:45:03.614 +05:00 [INF] HTTP GET /Company/Home/assets/media/avatars/300-11.jpg responded 404 in 0.7593 ms
+2024-09-04 10:45:03.616 +05:00 [INF] HTTP GET /Company/Home/assets/media/avatars/300-2.jpg responded 404 in 0.4170 ms
+2024-09-04 10:45:03.616 +05:00 [INF] HTTP GET /Company/Home/assets/media/avatars/300-12.jpg responded 404 in 0.3823 ms
+2024-09-04 10:45:04.866 +05:00 [INF] HTTP GET /Company/Client/Budget responded 200 in 1.6635 ms
+2024-09-04 10:45:04.901 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.5113 ms
+2024-09-04 10:45:04.926 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.9013 ms
+2024-09-04 10:45:04.947 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.8839 ms
+2024-09-04 10:45:06.179 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 209.9394 ms
+2024-09-04 10:45:06.221 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.4471 ms
+2024-09-04 10:45:06.230 +05:00 [INF] HTTP GET /Company/Home/assets/media/avatars/300-11.jpg responded 404 in 0.4702 ms
+2024-09-04 10:45:06.243 +05:00 [INF] HTTP GET /Company/Home/assets/media/avatars/300-12.jpg responded 404 in 0.5191 ms
+2024-09-04 10:45:06.243 +05:00 [INF] HTTP GET /Company/Home/assets/media/avatars/300-2.jpg responded 404 in 0.8204 ms
+2024-09-04 10:50:05.054 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 10:50:07.409 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 2361.0916 ms
+2024-09-04 10:50:07.499 +05:00 [INF] HTTP GET /Company/Home/assets/media/avatars/300-12.jpg responded 404 in 3.5634 ms
+2024-09-04 10:50:07.499 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 5.1649 ms
+2024-09-04 10:50:07.499 +05:00 [INF] HTTP GET /Company/Home/assets/media/avatars/300-11.jpg responded 404 in 5.1682 ms
+2024-09-04 10:50:07.502 +05:00 [INF] HTTP GET /Company/Home/assets/media/avatars/300-2.jpg responded 404 in 8.7027 ms
+2024-09-04 10:50:59.288 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 3.4704 ms
+2024-09-04 10:52:53.432 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 10:52:55.739 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 2311.7754 ms
+2024-09-04 10:52:55.802 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 7.7554 ms
+2024-09-04 10:54:16.999 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 10:54:19.893 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 2899.9108 ms
+2024-09-04 10:54:19.928 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 6.4742 ms
+2024-09-04 10:57:50.090 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 10:57:52.121 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 2035.1252 ms
+2024-09-04 10:57:52.223 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 8.4609 ms
+2024-09-04 10:58:58.051 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 10:59:00.436 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 2386.9258 ms
+2024-09-04 10:59:00.491 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 6.2672 ms
+2024-09-04 10:59:51.610 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 10:59:53.849 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 2241.5008 ms
+2024-09-04 10:59:53.894 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 4.7458 ms
+2024-09-04 11:01:00.552 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 11:01:03.234 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 2689.9524 ms
+2024-09-04 11:01:03.267 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 4.9798 ms
+2024-09-04 11:03:15.361 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 11:03:18.038 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 2677.7258 ms
+2024-09-04 11:03:18.089 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 4.3511 ms
+2024-09-04 11:03:18.118 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 5.4347 ms
+2024-09-04 11:03:18.126 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.8273 ms
+2024-09-04 11:03:25.334 +05:00 [INF] HTTP GET /Company/Client/index responded 200 in 218.0866 ms
+2024-09-04 11:03:25.380 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.7725 ms
+2024-09-04 11:03:25.448 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.9479 ms
+2024-09-04 11:03:25.457 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 2.1451 ms
+2024-09-04 11:03:25.470 +05:00 [INF] HTTP GET /js/client.js responded 200 in 67.7636 ms
+2024-09-04 11:04:37.897 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 11:04:41.111 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 3223.4622 ms
+2024-09-04 11:04:41.182 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 9.4010 ms
+2024-09-04 11:04:41.608 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 1.8879 ms
+2024-09-04 11:04:41.608 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 6.8875 ms
+2024-09-04 11:04:41.633 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.7341 ms
+2024-09-04 11:06:13.854 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 11:06:19.296 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 5445.6317 ms
+2024-09-04 11:06:19.702 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 2602.9109 ms
+2024-09-04 11:06:19.794 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 10.0366 ms
+2024-09-04 11:06:19.975 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 1.8438 ms
+2024-09-04 11:06:19.975 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 0.7314 ms
+2024-09-04 11:06:19.986 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.6191 ms
+2024-09-04 11:08:35.501 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 11:08:37.660 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 2160.9178 ms
+2024-09-04 11:08:37.736 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 4.8872 ms
+2024-09-04 11:08:37.950 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 3.6355 ms
+2024-09-04 11:08:37.980 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 2.3017 ms
+2024-09-04 11:08:38.102 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 0.8002 ms
+2024-09-04 11:09:34.367 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 11:09:37.423 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 3061.3400 ms
+2024-09-04 11:09:37.469 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 5.5979 ms
+2024-09-04 11:09:37.782 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 3.1261 ms
+2024-09-04 11:09:37.782 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 3.1237 ms
+2024-09-04 11:09:37.825 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.8068 ms
+2024-09-04 11:13:20.130 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 11:13:22.213 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 2084.1497 ms
+2024-09-04 11:13:22.264 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 6.6418 ms
+2024-09-04 11:13:22.670 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 3.2066 ms
+2024-09-04 11:13:22.670 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 3.2179 ms
+2024-09-04 11:13:22.687 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.6396 ms
+2024-09-04 11:15:17.938 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 11:15:19.968 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 2035.9111 ms
+2024-09-04 11:15:20.054 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 6.9983 ms
+2024-09-04 11:15:20.183 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 2.3890 ms
+2024-09-04 11:15:20.191 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.4995 ms
+2024-09-04 11:15:21.121 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 0.8408 ms
+2024-09-04 11:17:42.724 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 11:17:44.629 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 1906.3639 ms
+2024-09-04 11:17:44.696 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 4.2115 ms
+2024-09-04 11:17:44.933 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 6.9589 ms
+2024-09-04 11:17:44.933 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 6.7479 ms
+2024-09-04 11:17:44.947 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 1.4540 ms
+2024-09-04 11:20:51.586 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 11:20:53.995 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 2410.7072 ms
+2024-09-04 11:20:54.089 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 9.8407 ms
+2024-09-04 11:20:54.356 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 5.4502 ms
+2024-09-04 11:20:54.393 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 1.6806 ms
+2024-09-04 11:20:54.598 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 0.6628 ms
+2024-09-04 11:21:26.155 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 11:21:28.295 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 2148.9654 ms
+2024-09-04 11:21:28.339 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 3.8930 ms
+2024-09-04 11:21:28.579 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 2.6057 ms
+2024-09-04 11:21:28.579 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 2.6416 ms
+2024-09-04 11:21:28.590 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.6196 ms
+2024-09-04 11:22:43.040 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 11:22:45.848 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 2817.1460 ms
+2024-09-04 11:22:45.921 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 9.3405 ms
+2024-09-04 11:22:46.310 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 10.3032 ms
+2024-09-04 11:22:46.332 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.7455 ms
+2024-09-04 11:22:46.469 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 3.2697 ms
+2024-09-04 11:23:34.388 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 11:23:36.960 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 2576.2568 ms
+2024-09-04 11:23:36.998 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 5.7093 ms
+2024-09-04 11:23:37.223 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 2.1259 ms
+2024-09-04 11:23:37.223 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 2.1260 ms
+2024-09-04 11:23:37.232 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.6156 ms
+2024-09-04 11:26:03.985 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 11:26:06.237 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 2255.3433 ms
+2024-09-04 11:26:06.307 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 4.3903 ms
+2024-09-04 11:26:06.660 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 2.8261 ms
+2024-09-04 11:26:06.707 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 2.4998 ms
+2024-09-04 11:26:06.841 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 1.5035 ms
+2024-09-04 11:28:11.534 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 11:28:14.621 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 3093.9389 ms
+2024-09-04 11:28:14.664 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 7.2235 ms
+2024-09-04 11:28:15.052 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 16.1284 ms
+2024-09-04 11:28:15.052 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 8.0636 ms
+2024-09-04 11:28:15.068 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.8114 ms
+2024-09-04 11:29:18.424 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 11:29:21.329 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 2912.2382 ms
+2024-09-04 11:29:21.378 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 7.2028 ms
+2024-09-04 11:29:21.621 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 5.3815 ms
+2024-09-04 11:29:21.621 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 5.3680 ms
+2024-09-04 11:29:21.640 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 1.1943 ms
+2024-09-04 11:30:30.261 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 11:30:32.397 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 2145.8652 ms
+2024-09-04 11:30:32.459 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 5.3553 ms
+2024-09-04 11:30:32.806 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 5.8060 ms
+2024-09-04 11:30:32.843 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 1.0483 ms
+2024-09-04 11:30:33.394 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 0.7435 ms
+2024-09-04 11:31:40.111 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 11:31:42.369 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 2258.5731 ms
+2024-09-04 11:31:42.413 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 3.9325 ms
+2024-09-04 11:31:42.689 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 2.2357 ms
+2024-09-04 11:31:42.689 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 2.2368 ms
+2024-09-04 11:31:42.699 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.7965 ms
+2024-09-04 11:32:36.335 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 11:32:38.336 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 2009.7101 ms
+2024-09-04 11:32:38.394 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 6.2044 ms
+2024-09-04 11:32:38.978 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 6.3707 ms
+2024-09-04 11:32:38.980 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 1.0421 ms
+2024-09-04 11:32:38.997 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 1.4643 ms
+2024-09-04 11:33:36.512 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 11:33:38.558 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 2047.9508 ms
+2024-09-04 11:33:38.598 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 5.2899 ms
+2024-09-04 11:33:38.757 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 5.8651 ms
+2024-09-04 11:33:38.780 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.9138 ms
+2024-09-04 11:34:33.708 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 11:34:35.804 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 2099.8962 ms
+2024-09-04 11:34:35.841 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 4.0273 ms
+2024-09-04 11:34:35.889 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 2.2643 ms
+2024-09-04 11:34:35.910 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.6360 ms
+2024-09-04 11:36:19.375 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 11:36:21.893 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 2521.9519 ms
+2024-09-04 11:36:21.942 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 4.6343 ms
+2024-09-04 11:36:22.093 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 3.5756 ms
+2024-09-04 11:36:22.109 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.6314 ms
+2024-09-04 11:39:05.962 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 11:39:09.092 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 3136.7085 ms
+2024-09-04 11:39:09.141 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 6.8553 ms
+2024-09-04 11:39:09.199 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 5.8930 ms
+2024-09-04 11:39:09.219 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.9603 ms
+2024-09-04 11:39:46.457 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 11:39:49.213 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 2761.8185 ms
+2024-09-04 11:39:49.249 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 5.0222 ms
+2024-09-04 11:39:49.498 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 6.6416 ms
+2024-09-04 11:39:49.551 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.8380 ms
+2024-09-04 11:40:06.494 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 11:40:08.803 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 2311.6452 ms
+2024-09-04 11:40:08.839 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 3.6411 ms
+2024-09-04 11:40:08.903 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 2.4553 ms
+2024-09-04 11:40:08.926 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.4227 ms
+2024-09-04 11:40:19.004 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 1.1418 ms
+2024-09-04 11:42:00.839 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 11:42:02.897 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 2058.9516 ms
+2024-09-04 11:42:02.923 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 3.0405 ms
+2024-09-04 11:42:03.451 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 2.8513 ms
+2024-09-04 11:42:03.463 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 1.8902 ms
+2024-09-04 11:42:03.505 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 1.5264 ms
+2024-09-04 11:42:07.947 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 227.8983 ms
+2024-09-04 11:42:07.995 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 3.0023 ms
+2024-09-04 11:42:08.202 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 0.5304 ms
+2024-09-04 11:42:08.204 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.7958 ms
+2024-09-04 11:42:08.214 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.6890 ms
+2024-09-04 11:42:10.204 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 218.4701 ms
+2024-09-04 11:42:10.244 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 1.0680 ms
+2024-09-04 11:42:10.399 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 0.4031 ms
+2024-09-04 11:42:10.399 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.4033 ms
+2024-09-04 11:42:10.411 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 1.4789 ms
+2024-09-04 11:43:42.591 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 11:43:44.339 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 1749.3046 ms
+2024-09-04 11:43:44.381 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 4.3006 ms
+2024-09-04 11:43:44.521 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 2.6195 ms
+2024-09-04 11:43:44.521 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 2.8272 ms
+2024-09-04 11:43:44.550 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.6742 ms
+2024-09-04 11:45:26.375 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 11:45:28.230 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 1861.8644 ms
+2024-09-04 11:45:28.292 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 5.7746 ms
+2024-09-04 11:45:28.438 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 2.4622 ms
+2024-09-04 11:45:28.438 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.4873 ms
+2024-09-04 11:45:28.445 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.4332 ms
+2024-09-04 11:46:17.462 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 11:46:19.385 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 1925.7644 ms
+2024-09-04 11:46:19.438 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 4.8479 ms
+2024-09-04 11:46:19.711 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 2.3429 ms
+2024-09-04 11:46:19.711 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 2.3390 ms
+2024-09-04 11:46:19.727 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.8879 ms
+2024-09-04 11:47:38.730 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 11:47:40.673 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 1949.3351 ms
+2024-09-04 11:47:40.725 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 7.2312 ms
+2024-09-04 11:47:41.050 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 3.2863 ms
+2024-09-04 11:47:41.050 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 1.8436 ms
+2024-09-04 11:47:41.079 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 1.4507 ms
+2024-09-04 11:48:01.283 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 230.3553 ms
+2024-09-04 11:48:01.325 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.8101 ms
+2024-09-04 11:48:01.548 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 0.3967 ms
+2024-09-04 11:48:01.548 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.3976 ms
+2024-09-04 11:48:01.563 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.5457 ms
+2024-09-04 11:48:08.832 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 210.2040 ms
+2024-09-04 11:48:08.900 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 4.6899 ms
+2024-09-04 11:48:08.982 +05:00 [INF] HTTP GET /assets/js/widgets.js responded 200 in 66.3696 ms
+2024-09-04 11:48:09.006 +05:00 [INF] HTTP GET /assets/css/style.bundle.css responded 200 in 111.4622 ms
+2024-09-04 11:48:09.007 +05:00 [INF] HTTP GET /assets/js/widgets.bundle.js responded 200 in 104.4350 ms
+2024-09-04 11:48:09.049 +05:00 [INF] HTTP GET /assets/js/chat.js responded 200 in 59.7639 ms
+2024-09-04 11:48:09.051 +05:00 [INF] HTTP GET /assets/css/plugins.bundle.css responded 200 in 158.1375 ms
+2024-09-04 11:48:09.061 +05:00 [INF] HTTP GET /assets/js/scripts.bundle.js responded 200 in 157.1880 ms
+2024-09-04 11:48:09.403 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.5713 ms
+2024-09-04 11:48:09.481 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.6292 ms
+2024-09-04 11:48:10.135 +05:00 [INF] HTTP GET /assets/js/plugins.bundle.js responded 200 in 1239.1843 ms
+2024-09-04 11:48:10.489 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 0.6489 ms
+2024-09-04 11:48:10.651 +05:00 [INF] HTTP GET /~/assets/media/favicons/favicon.png responded 404 in 5.3279 ms
+2024-09-04 11:48:10.660 +05:00 [INF] HTTP GET /~/assets/media//favicons/favicon-192x192.png responded 404 in 4.3090 ms
+2024-09-04 11:51:54.140 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 11:51:55.760 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 1621.5966 ms
+2024-09-04 11:51:55.796 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 2.4674 ms
+2024-09-04 11:51:55.951 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 1.9952 ms
+2024-09-04 11:51:55.988 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.5047 ms
+2024-09-04 11:52:55.606 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 11:52:57.270 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 1663.5537 ms
+2024-09-04 11:52:57.292 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 4.0947 ms
+2024-09-04 11:52:57.371 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 2.3156 ms
+2024-09-04 11:52:57.397 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.5225 ms
+2024-09-04 11:54:33.155 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 11:54:34.852 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 1698.7649 ms
+2024-09-04 11:54:34.884 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 3.8026 ms
+2024-09-04 11:54:34.948 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 1.6539 ms
+2024-09-04 11:54:34.968 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.5399 ms
+2024-09-04 11:57:39.576 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 11:57:41.444 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 1870.2748 ms
+2024-09-04 11:57:41.491 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 4.9231 ms
+2024-09-04 11:57:41.551 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 4.7195 ms
+2024-09-04 11:57:41.567 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.4704 ms
+2024-09-04 12:00:31.376 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 12:00:33.020 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 1644.8675 ms
+2024-09-04 12:00:33.081 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 4.1723 ms
+2024-09-04 12:00:33.378 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 3.4756 ms
+2024-09-04 12:00:33.433 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.6888 ms
+2024-09-04 12:02:42.415 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 12:02:44.159 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 1744.6478 ms
+2024-09-04 12:02:44.192 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 2.7987 ms
+2024-09-04 12:02:44.296 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 1.9738 ms
+2024-09-04 12:02:44.345 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.9193 ms
+2024-09-04 12:03:07.074 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 2.6853 ms
+2024-09-04 12:04:22.155 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 12:04:23.836 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 1683.6782 ms
+2024-09-04 12:04:23.864 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 3.0537 ms
+2024-09-04 12:04:23.933 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-regular-400.woff2 responded 404 in 4.1692 ms
+2024-09-04 12:04:23.933 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 3.8198 ms
+2024-09-04 12:04:23.950 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.4698 ms
+2024-09-04 12:04:23.950 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-regular-400.ttf responded 404 in 0.4698 ms
+2024-09-04 12:04:34.418 +05:00 [INF] HTTP GET /Company/Client/Budget responded 200 in 73.1794 ms
+2024-09-04 12:04:34.445 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.6246 ms
+2024-09-04 12:04:34.470 +05:00 [INF] HTTP GET /js/clientbudget.js responded 200 in 10.1831 ms
+2024-09-04 12:04:34.483 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.6534 ms
+2024-09-04 12:04:34.515 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.4322 ms
+2024-09-04 12:04:37.012 +05:00 [INF] HTTP GET /Company/Client/index responded 200 in 12.9486 ms
+2024-09-04 12:04:37.049 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.8735 ms
+2024-09-04 12:04:37.057 +05:00 [INF] HTTP GET /js/client.js responded 200 in 1.8678 ms
+2024-09-04 12:04:37.070 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.6694 ms
+2024-09-04 12:04:37.106 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.4218 ms
+2024-09-04 12:04:39.217 +05:00 [INF] HTTP GET /Company/Client/index responded 200 in 1.9074 ms
+2024-09-04 12:04:39.248 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.5832 ms
+2024-09-04 12:04:39.305 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.6537 ms
+2024-09-04 12:04:39.324 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.5673 ms
+2024-09-04 12:04:42.993 +05:00 [INF] HTTP GET /Company/Client/index responded 200 in 0.9969 ms
+2024-09-04 12:04:43.044 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.6374 ms
+2024-09-04 12:04:43.096 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.3695 ms
+2024-09-04 12:04:43.114 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.4023 ms
+2024-09-04 12:04:57.835 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 222.1744 ms
+2024-09-04 12:04:57.868 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.8297 ms
+2024-09-04 12:04:57.925 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.6001 ms
+2024-09-04 12:04:57.925 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-regular-400.woff2 responded 404 in 0.1998 ms
+2024-09-04 12:04:57.945 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 1.4290 ms
+2024-09-04 12:04:57.945 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-regular-400.ttf responded 404 in 1.0995 ms
+2024-09-04 12:04:59.073 +05:00 [INF] HTTP GET /Company/Client/index responded 200 in 1.0373 ms
+2024-09-04 12:04:59.106 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.4057 ms
+2024-09-04 12:04:59.145 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.4085 ms
+2024-09-04 12:04:59.161 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.3818 ms
+2024-09-04 12:05:03.218 +05:00 [INF] HTTP GET /Company/Schedule/BudgetSchedule1 responded 200 in 723.2803 ms
+2024-09-04 12:05:03.250 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.4168 ms
+2024-09-04 12:05:03.265 +05:00 [INF] HTTP GET /js/BudgetSchedule1.js responded 200 in 6.0287 ms
+2024-09-04 12:05:03.281 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.4912 ms
+2024-09-04 12:05:03.290 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 3.3295 ms
+2024-09-04 12:05:06.062 +05:00 [INF] HTTP GET /Company/Client/addClientbudget responded 200 in 1495.3347 ms
+2024-09-04 12:05:06.096 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.3939 ms
+2024-09-04 12:05:06.108 +05:00 [INF] HTTP GET /js/AddClientBudget.js responded 200 in 2.7527 ms
+2024-09-04 12:05:06.144 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.5653 ms
+2024-09-04 12:05:06.171 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.4195 ms
+2024-09-04 12:05:07.845 +05:00 [INF] HTTP GET /Company/Client/index responded 200 in 1.1800 ms
+2024-09-04 12:05:07.864 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.4561 ms
+2024-09-04 12:05:07.910 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.3382 ms
+2024-09-04 12:05:07.926 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.2569 ms
+2024-09-04 12:05:09.952 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 217.1189 ms
+2024-09-04 12:05:09.984 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.5336 ms
+2024-09-04 12:05:10.025 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.6215 ms
+2024-09-04 12:05:10.025 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-regular-400.woff2 responded 404 in 0.3242 ms
+2024-09-04 12:05:10.043 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-regular-400.ttf responded 404 in 0.3853 ms
+2024-09-04 12:05:10.043 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.3852 ms
+2024-09-04 12:05:47.446 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 2.5032 ms
+2024-09-04 12:06:23.446 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 12:06:25.896 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 2453.8360 ms
+2024-09-04 12:06:25.982 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 6.3208 ms
+2024-09-04 12:06:26.691 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-regular-400.woff2 responded 404 in 7.1788 ms
+2024-09-04 12:06:26.691 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 8.2541 ms
+2024-09-04 12:06:26.691 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 8.2478 ms
+2024-09-04 12:06:26.720 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.4607 ms
+2024-09-04 12:06:26.721 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-regular-400.ttf responded 404 in 2.2387 ms
+2024-09-04 12:08:37.878 +05:00 [INF] HTTP GET /Company/Client/Budget responded 200 in 108.1636 ms
+2024-09-04 12:08:37.939 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.5375 ms
+2024-09-04 12:08:38.032 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.6427 ms
+2024-09-04 12:08:38.054 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.6112 ms
+2024-09-04 12:08:51.049 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 0.6422 ms
+2024-09-04 12:08:53.769 +05:00 [INF] HTTP GET /Company/Client/Budget responded 200 in 5.1503 ms
+2024-09-04 12:08:53.809 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 6.8664 ms
+2024-09-04 12:08:54.173 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.3940 ms
+2024-09-04 12:08:54.173 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 0.4959 ms
+2024-09-04 12:08:54.188 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 1.7156 ms
+2024-09-04 12:09:05.871 +05:00 [INF] HTTP GET /Company/Client/Budget responded 200 in 1.6513 ms
+2024-09-04 12:09:05.908 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.6938 ms
+2024-09-04 12:09:06.223 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 0.7584 ms
+2024-09-04 12:09:06.223 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.7543 ms
+2024-09-04 12:09:06.230 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.8505 ms
+2024-09-04 12:09:10.809 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 219.4138 ms
+2024-09-04 12:09:10.838 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.2888 ms
+2024-09-04 12:09:10.897 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-regular-400.woff2 responded 404 in 0.5230 ms
+2024-09-04 12:09:10.897 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.5360 ms
+2024-09-04 12:09:10.915 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.3918 ms
+2024-09-04 12:09:10.915 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-regular-400.ttf responded 404 in 0.3921 ms
+2024-09-04 12:09:16.168 +05:00 [INF] HTTP GET /Company/Client/Budget responded 200 in 1.4592 ms
+2024-09-04 12:09:16.208 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.3960 ms
+2024-09-04 12:09:16.238 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.3886 ms
+2024-09-04 12:09:16.253 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.5051 ms
+2024-09-04 12:09:19.634 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 0.5394 ms
+2024-09-04 12:10:25.282 +05:00 [INF] HTTP GET /Company/Client/addClientbudget responded 200 in 1123.0026 ms
+2024-09-04 12:10:25.318 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.3285 ms
+2024-09-04 12:10:25.355 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.3525 ms
+2024-09-04 12:10:25.381 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.5886 ms
+2024-09-04 12:10:35.951 +05:00 [INF] HTTP GET /Company/Client/Budget responded 200 in 1.4849 ms
+2024-09-04 12:10:35.973 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.3594 ms
+2024-09-04 12:10:36.019 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 1.2514 ms
+2024-09-04 12:10:36.037 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.3375 ms
+2024-09-04 12:10:39.268 +05:00 [INF] HTTP GET /Company/Client/addClientbudget responded 200 in 821.6873 ms
+2024-09-04 12:10:39.298 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.4196 ms
+2024-09-04 12:10:39.344 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.2910 ms
+2024-09-04 12:10:39.371 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.2535 ms
+2024-09-04 12:11:47.899 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 215.8721 ms
+2024-09-04 12:11:47.925 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.3075 ms
+2024-09-04 12:11:47.977 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.3597 ms
+2024-09-04 12:11:47.977 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-regular-400.woff2 responded 404 in 0.4191 ms
+2024-09-04 12:11:47.995 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-regular-400.ttf responded 404 in 0.2979 ms
+2024-09-04 12:11:47.995 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.3139 ms
+2024-09-04 12:11:49.505 +05:00 [INF] HTTP GET /Company/Client/Budget responded 200 in 0.8742 ms
+2024-09-04 12:11:49.535 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.2837 ms
+2024-09-04 12:11:49.579 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.4206 ms
+2024-09-04 12:11:49.595 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.5117 ms
+2024-09-04 12:11:57.462 +05:00 [INF] HTTP GET /Company/Client/addClientbudget responded 200 in 615.5564 ms
+2024-09-04 12:11:57.492 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.2517 ms
+2024-09-04 12:11:57.536 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.2722 ms
+2024-09-04 12:11:57.560 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.3193 ms
+2024-09-04 12:22:40.937 +05:00 [INF] HTTP GET /Company/Client/Budget responded 200 in 0.9485 ms
+2024-09-04 12:22:40.987 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.4993 ms
+2024-09-04 12:22:41.033 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.3212 ms
+2024-09-04 12:22:41.074 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.2507 ms
+2024-09-04 12:23:32.383 +05:00 [INF] HTTP GET /Company/Client/Add responded 200 in 1037.6480 ms
+2024-09-04 12:23:32.414 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.2880 ms
+2024-09-04 12:23:32.482 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.4591 ms
+2024-09-04 12:23:32.503 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.3160 ms
+2024-09-04 12:25:43.858 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 12:25:45.635 +05:00 [INF] HTTP GET /Company/Client/Add responded 200 in 1779.7022 ms
+2024-09-04 12:25:45.666 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 4.7779 ms
+2024-09-04 12:25:45.740 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 1.7603 ms
+2024-09-04 12:25:45.770 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.3848 ms
+2024-09-04 12:28:26.930 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 12:28:28.602 +05:00 [INF] HTTP GET /Company/Client/Add responded 200 in 1672.9689 ms
+2024-09-04 12:28:28.665 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 5.9456 ms
+2024-09-04 12:28:28.755 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 1.8527 ms
+2024-09-04 12:28:28.763 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.4078 ms
+2024-09-04 12:28:53.084 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 12:28:54.834 +05:00 [INF] HTTP GET /Company/Client/Add responded 200 in 1751.2176 ms
+2024-09-04 12:28:54.860 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 2.4047 ms
+2024-09-04 12:28:54.905 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 1.6150 ms
+2024-09-04 12:28:54.933 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.5405 ms
+2024-09-04 12:29:04.895 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 0.4929 ms
+2024-09-04 12:31:18.435 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 12:31:20.432 +05:00 [INF] HTTP GET /Company/Client/Add responded 200 in 2002.8610 ms
+2024-09-04 12:31:20.494 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 5.3904 ms
+2024-09-04 12:31:20.677 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 3.0164 ms
+2024-09-04 12:31:20.702 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.6971 ms
+2024-09-04 12:31:21.051 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 0.6977 ms
+2024-09-04 12:32:39.346 +05:00 [INF] HTTP GET /Company/Client/index responded 200 in 18.6196 ms
+2024-09-04 12:32:39.366 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.6148 ms
+2024-09-04 12:32:39.413 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 6.3300 ms
+2024-09-04 12:32:39.454 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 1.6753 ms
+2024-09-04 12:32:46.016 +05:00 [INF] HTTP GET /Company/Schedule/BudgetSchedule1 responded 200 in 635.7976 ms
+2024-09-04 12:32:46.811 +05:00 [INF] HTTP GET /Company/Client/Budget responded 200 in 11.2104 ms
+2024-09-04 12:32:46.842 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.4779 ms
+2024-09-04 12:32:46.877 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.7389 ms
+2024-09-04 12:32:46.927 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.5269 ms
+2024-09-04 12:32:47.816 +05:00 [INF] HTTP GET /Company/Client/addClientbudget responded 200 in 1896.1943 ms
+2024-09-04 12:32:47.977 +05:00 [INF] HTTP GET /Company/Client/Add responded 200 in 195.2608 ms
+2024-09-04 12:32:48.008 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 1.5517 ms
+2024-09-04 12:32:48.047 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.5618 ms
+2024-09-04 12:32:48.072 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.5873 ms
+2024-09-04 12:33:13.956 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 12:33:14.260 +05:00 [INF] HTTP GET /Company/Client/Budget responded 200 in 304.3222 ms
+2024-09-04 12:33:14.306 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 5.0728 ms
+2024-09-04 12:33:14.377 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 2.5164 ms
+2024-09-04 12:33:14.398 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.4163 ms
+2024-09-04 12:33:17.117 +05:00 [INF] HTTP GET /Company/Client/Budget responded 200 in 8.3977 ms
+2024-09-04 12:33:17.137 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.4351 ms
+2024-09-04 12:33:17.184 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.3742 ms
+2024-09-04 12:33:17.200 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.4242 ms
+2024-09-04 12:33:20.688 +05:00 [INF] HTTP GET /Company/Client/Add responded 200 in 1795.3797 ms
+2024-09-04 12:33:20.720 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.7672 ms
+2024-09-04 12:33:20.767 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.5730 ms
+2024-09-04 12:33:20.785 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.6523 ms
+2024-09-04 12:35:10.939 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 12:35:12.657 +05:00 [INF] HTTP GET /Company/Client/Add responded 200 in 1719.6406 ms
+2024-09-04 12:35:12.695 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 2.9992 ms
+2024-09-04 12:35:12.765 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 1.9114 ms
+2024-09-04 12:35:12.779 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.3822 ms
+2024-09-04 12:35:35.183 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 12:35:36.930 +05:00 [INF] HTTP GET /Company/Client/Add responded 200 in 1747.8780 ms
+2024-09-04 12:35:36.961 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 3.8285 ms
+2024-09-04 12:35:37.015 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 1.7304 ms
+2024-09-04 12:35:37.041 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.7982 ms
+2024-09-04 12:36:40.783 +05:00 [INF] HTTP GET /Company/Home/Index responded 200 in 303.6689 ms
+2024-09-04 12:36:40.828 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.4056 ms
+2024-09-04 12:36:40.859 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-regular-400.woff2 responded 404 in 0.2687 ms
+2024-09-04 12:36:40.859 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.5242 ms
+2024-09-04 12:36:40.879 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-regular-400.ttf responded 404 in 0.5330 ms
+2024-09-04 12:36:40.879 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.5330 ms
+2024-09-04 12:37:08.356 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 12:37:10.044 +05:00 [INF] HTTP GET /Company/Client/Add responded 200 in 1693.5988 ms
+2024-09-04 12:37:10.077 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 3.0770 ms
+2024-09-04 12:37:10.128 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 2.0130 ms
+2024-09-04 12:37:10.147 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.4138 ms
+2024-09-04 12:37:12.784 +05:00 [INF] HTTP GET /Company/Client/Add responded 200 in 203.7906 ms
+2024-09-04 12:37:12.807 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.4143 ms
+2024-09-04 12:37:12.851 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.3761 ms
+2024-09-04 12:37:12.864 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.4021 ms
+2024-09-04 12:37:16.316 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 0.5571 ms
+2024-09-04 12:38:06.523 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 12:38:08.248 +05:00 [INF] HTTP GET /Company/Client/Add responded 200 in 1730.5576 ms
+2024-09-04 12:38:08.309 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 6.9407 ms
+2024-09-04 12:38:08.694 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 2.4658 ms
+2024-09-04 12:38:08.694 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 2.4659 ms
+2024-09-04 12:38:08.747 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.5502 ms
+2024-09-04 12:38:11.387 +05:00 [INF] HTTP GET /Company/Client/Add responded 200 in 210.4468 ms
+2024-09-04 12:38:11.418 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.5915 ms
+2024-09-04 12:38:11.935 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 0.6532 ms
+2024-09-04 12:38:11.939 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.7248 ms
+2024-09-04 12:38:11.990 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.5933 ms
+2024-09-04 12:39:19.130 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 12:39:21.031 +05:00 [INF] HTTP GET /Company/Client/Add responded 200 in 1904.5207 ms
+2024-09-04 12:39:21.098 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 4.0407 ms
+2024-09-04 12:39:21.214 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 3.4046 ms
+2024-09-04 12:39:21.224 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.6629 ms
+2024-09-04 12:39:22.211 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 0.8858 ms
+2024-09-04 12:39:52.127 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 12:39:54.335 +05:00 [INF] HTTP GET /Company/Client/Add responded 200 in 2213.0507 ms
+2024-09-04 12:39:54.395 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 10.3991 ms
+2024-09-04 12:39:54.425 +05:00 [INF] HTTP GET /assets/js/widgets.js responded 200 in 23.2753 ms
+2024-09-04 12:39:54.432 +05:00 [INF] HTTP GET /assets/js/scripts.bundle.js responded 200 in 38.0210 ms
+2024-09-04 12:39:54.438 +05:00 [INF] HTTP GET /assets/js/chat.js responded 200 in 5.7930 ms
+2024-09-04 12:39:54.439 +05:00 [INF] HTTP GET /assets/js/widgets.bundle.js responded 200 in 43.8950 ms
+2024-09-04 12:39:54.446 +05:00 [INF] HTTP GET /assets/css/plugins.bundle.css responded 200 in 61.1549 ms
+2024-09-04 12:39:54.453 +05:00 [INF] HTTP GET /assets/css/style.bundle.css responded 200 in 68.1674 ms
+2024-09-04 12:39:54.461 +05:00 [INF] HTTP GET /assets/js/plugins.bundle.js responded 200 in 68.9508 ms
+2024-09-04 12:39:54.502 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 3.0941 ms
+2024-09-04 12:39:54.577 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.5744 ms
+2024-09-04 12:39:55.323 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 1.1112 ms
+2024-09-04 12:39:55.562 +05:00 [INF] HTTP GET /~/assets/media/favicons/favicon.png responded 404 in 3.4017 ms
+2024-09-04 12:39:55.602 +05:00 [INF] HTTP GET /~/assets/media//favicons/favicon-192x192.png responded 404 in 3.1979 ms
+2024-09-04 12:40:11.242 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 12:40:13.027 +05:00 [INF] HTTP GET /Company/Client/Add responded 200 in 1788.9151 ms
+2024-09-04 12:40:13.092 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 8.4350 ms
+2024-09-04 12:40:13.100 +05:00 [INF] HTTP GET /assets/js/widgets.js responded 200 in 4.1401 ms
+2024-09-04 12:40:13.115 +05:00 [INF] HTTP GET /assets/js/chat.js responded 200 in 9.7576 ms
+2024-09-04 12:40:13.119 +05:00 [INF] HTTP GET /assets/js/scripts.bundle.js responded 200 in 34.7411 ms
+2024-09-04 12:40:13.126 +05:00 [INF] HTTP GET /assets/css/plugins.bundle.css responded 200 in 42.3784 ms
+2024-09-04 12:40:13.126 +05:00 [INF] HTTP GET /assets/js/widgets.bundle.js responded 200 in 38.3628 ms
+2024-09-04 12:40:13.134 +05:00 [INF] HTTP GET /assets/css/style.bundle.css responded 200 in 50.2295 ms
+2024-09-04 12:40:13.162 +05:00 [INF] HTTP GET /assets/js/plugins.bundle.js responded 200 in 77.5815 ms
+2024-09-04 12:40:13.250 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 7.9111 ms
+2024-09-04 12:40:13.480 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 1.2637 ms
+2024-09-04 12:40:13.840 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 0.8021 ms
+2024-09-04 12:40:14.850 +05:00 [INF] HTTP GET /~/assets/media/favicons/favicon.png responded 404 in 3.8388 ms
+2024-09-04 12:40:14.864 +05:00 [INF] HTTP GET /~/assets/media//favicons/favicon-192x192.png responded 404 in 4.7476 ms
+2024-09-04 12:40:49.044 +05:00 [INF] HTTP POST /Company/Client/Add responded 200 in 233.2010 ms
+2024-09-04 12:40:49.069 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.5115 ms
+2024-09-04 12:40:49.210 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.4094 ms
+2024-09-04 12:40:49.240 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.3602 ms
+2024-09-04 12:40:58.541 +05:00 [INF] HTTP GET /Company/Client/index responded 200 in 18.8025 ms
+2024-09-04 12:40:58.571 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 1.2325 ms
+2024-09-04 12:40:58.572 +05:00 [INF] HTTP GET /js/client.js responded 200 in 1.3967 ms
+2024-09-04 12:40:58.622 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.3682 ms
+2024-09-04 12:40:58.630 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.4679 ms
+2024-09-04 12:41:03.290 +05:00 [INF] HTTP GET /Company/Client/addClientbudget responded 200 in 1013.1399 ms
+2024-09-04 12:41:03.327 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 1.0166 ms
+2024-09-04 12:41:03.348 +05:00 [INF] HTTP GET /js/AddClientBudget.js responded 200 in 1.6175 ms
+2024-09-04 12:41:03.374 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.5213 ms
+2024-09-04 12:41:03.398 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.4903 ms
+2024-09-04 12:41:11.378 +05:00 [INF] HTTP GET /Company/Client/Budget responded 200 in 9.0625 ms
+2024-09-04 12:41:11.403 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.4254 ms
+2024-09-04 12:41:11.415 +05:00 [INF] HTTP GET /js/clientbudget.js responded 200 in 1.3880 ms
+2024-09-04 12:41:11.462 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.4758 ms
+2024-09-04 12:41:11.478 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.2891 ms
+2024-09-04 12:41:13.149 +05:00 [INF] HTTP GET /Company/Client/addClientbudget responded 200 in 752.1332 ms
+2024-09-04 12:41:13.181 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.4216 ms
+2024-09-04 12:41:13.218 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.4503 ms
+2024-09-04 12:41:13.249 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.5521 ms
+2024-09-04 12:41:50.418 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 12:41:52.996 +05:00 [INF] HTTP GET /Company/Client/addClientbudget responded 200 in 2580.1306 ms
+2024-09-04 12:41:53.034 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 4.8494 ms
+2024-09-04 12:41:53.139 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 3.4779 ms
+2024-09-04 12:41:53.189 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.6612 ms
+2024-09-04 12:45:46.403 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 12:45:49.047 +05:00 [INF] HTTP GET /Company/Client/addClientbudget responded 200 in 2645.9199 ms
+2024-09-04 12:45:49.096 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 4.1804 ms
+2024-09-04 12:45:49.206 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 1.7079 ms
+2024-09-04 12:45:49.214 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.4228 ms
+2024-09-04 12:46:26.049 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 12:46:28.633 +05:00 [INF] HTTP GET /Company/Client/addClientbudget responded 200 in 2586.0745 ms
+2024-09-04 12:46:28.692 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 4.3245 ms
+2024-09-04 12:46:28.725 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 1.7831 ms
+2024-09-04 12:46:28.760 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.9838 ms
+2024-09-04 12:47:05.572 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 12:47:08.348 +05:00 [INF] HTTP GET /Company/Client/addClientbudget responded 200 in 2776.6347 ms
+2024-09-04 12:47:08.405 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 3.9760 ms
+2024-09-04 12:47:08.512 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 2.9506 ms
+2024-09-04 12:47:08.521 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.7304 ms
+2024-09-04 12:48:40.305 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 12:48:42.923 +05:00 [INF] HTTP GET /Company/Client/addClientbudget responded 200 in 2619.5369 ms
+2024-09-04 12:48:42.971 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 3.8128 ms
+2024-09-04 12:48:43.036 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 1.7202 ms
+2024-09-04 12:48:43.057 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.4449 ms
+2024-09-04 12:51:51.486 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 12:51:54.331 +05:00 [ERR] HTTP GET /Company/Client/addClientbudget responded 500 in 2846.1041 ms
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Microsoft.AspNetCore.Mvc.Rendering.MultiSelectList.GetListItemsWithValueField()
+   at Microsoft.AspNetCore.Mvc.Rendering.MultiSelectList.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.DefaultHtmlGenerator.GenerateGroupsAndOptions(String optionLabel, IEnumerable`1 selectList, ICollection`1 currentValues)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.DefaultHtmlGenerator.GenerateSelect(ViewContext viewContext, ModelExplorer modelExplorer, String optionLabel, String expression, IEnumerable`1 selectList, ICollection`1 currentValues, Boolean allowMultiple, Object htmlAttributes)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.SelectTagHelper.Process(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.TagHelpers.TagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.RunAsync(TagHelperExecutionContext executionContext)
+   at AspNetCoreGeneratedDocument.Areas_Company_Views_Client_AddClientBudget.<ExecuteAsync>b__92_0()
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCoreGeneratedDocument.Areas_Company_Views_Client_AddClientBudget.ExecuteAsync() in c:\Users\Lenovo\OneDrive\Desktop\sushma project code\NDISBudget\NDISBudget\Areas\Company\Views\Client\AddClientBudget.cshtml:line 5
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2024-09-04 12:51:54.344 +05:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Microsoft.AspNetCore.Mvc.Rendering.MultiSelectList.GetListItemsWithValueField()
+   at Microsoft.AspNetCore.Mvc.Rendering.MultiSelectList.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.DefaultHtmlGenerator.GenerateGroupsAndOptions(String optionLabel, IEnumerable`1 selectList, ICollection`1 currentValues)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.DefaultHtmlGenerator.GenerateSelect(ViewContext viewContext, ModelExplorer modelExplorer, String optionLabel, String expression, IEnumerable`1 selectList, ICollection`1 currentValues, Boolean allowMultiple, Object htmlAttributes)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.SelectTagHelper.Process(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.TagHelpers.TagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.RunAsync(TagHelperExecutionContext executionContext)
+   at AspNetCoreGeneratedDocument.Areas_Company_Views_Client_AddClientBudget.<ExecuteAsync>b__92_0()
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCoreGeneratedDocument.Areas_Company_Views_Client_AddClientBudget.ExecuteAsync() in c:\Users\Lenovo\OneDrive\Desktop\sushma project code\NDISBudget\NDISBudget\Areas\Company\Views\Client\AddClientBudget.cshtml:line 5
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2024-09-04 12:51:54.353 +05:00 [INF] HTTP GET /Error responded 404 in 0.9022 ms
+2024-09-04 12:51:54.355 +05:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The exception handler configured on ExceptionHandlerOptions produced a 404 status response. This InvalidOperationException containing the original exception was thrown since this is often due to a misconfigured ExceptionHandlingPath. If the exception handler is expected to return 404 status responses then set AllowStatusCode404Response to true.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at Microsoft.AspNetCore.Mvc.Rendering.MultiSelectList.GetListItemsWithValueField()
+   at Microsoft.AspNetCore.Mvc.Rendering.MultiSelectList.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.DefaultHtmlGenerator.GenerateGroupsAndOptions(String optionLabel, IEnumerable`1 selectList, ICollection`1 currentValues)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.DefaultHtmlGenerator.GenerateSelect(ViewContext viewContext, ModelExplorer modelExplorer, String optionLabel, String expression, IEnumerable`1 selectList, ICollection`1 currentValues, Boolean allowMultiple, Object htmlAttributes)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.SelectTagHelper.Process(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.TagHelpers.TagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.RunAsync(TagHelperExecutionContext executionContext)
+   at AspNetCoreGeneratedDocument.Areas_Company_Views_Client_AddClientBudget.<ExecuteAsync>b__92_0()
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCoreGeneratedDocument.Areas_Company_Views_Client_AddClientBudget.ExecuteAsync() in c:\Users\Lenovo\OneDrive\Desktop\sushma project code\NDISBudget\NDISBudget\Areas\Company\Views\Client\AddClientBudget.cshtml:line 5
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-04 12:51:54.484 +05:00 [INF] HTTP GET /favicon.ico responded 200 in 8.5495 ms
+2024-09-04 12:52:24.933 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 12:52:27.738 +05:00 [ERR] HTTP GET /Company/Client/addClientbudget responded 500 in 2811.7243 ms
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Microsoft.AspNetCore.Mvc.Rendering.MultiSelectList.GetListItemsWithValueField()
+   at Microsoft.AspNetCore.Mvc.Rendering.MultiSelectList.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.DefaultHtmlGenerator.GenerateGroupsAndOptions(String optionLabel, IEnumerable`1 selectList, ICollection`1 currentValues)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.DefaultHtmlGenerator.GenerateSelect(ViewContext viewContext, ModelExplorer modelExplorer, String optionLabel, String expression, IEnumerable`1 selectList, ICollection`1 currentValues, Boolean allowMultiple, Object htmlAttributes)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.SelectTagHelper.Process(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.TagHelpers.TagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.RunAsync(TagHelperExecutionContext executionContext)
+   at AspNetCoreGeneratedDocument.Areas_Company_Views_Client_AddClientBudget.<ExecuteAsync>b__92_0()
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCoreGeneratedDocument.Areas_Company_Views_Client_AddClientBudget.ExecuteAsync() in c:\Users\Lenovo\OneDrive\Desktop\sushma project code\NDISBudget\NDISBudget\Areas\Company\Views\Client\AddClientBudget.cshtml:line 5
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2024-09-04 12:52:27.752 +05:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Microsoft.AspNetCore.Mvc.Rendering.MultiSelectList.GetListItemsWithValueField()
+   at Microsoft.AspNetCore.Mvc.Rendering.MultiSelectList.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.DefaultHtmlGenerator.GenerateGroupsAndOptions(String optionLabel, IEnumerable`1 selectList, ICollection`1 currentValues)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.DefaultHtmlGenerator.GenerateSelect(ViewContext viewContext, ModelExplorer modelExplorer, String optionLabel, String expression, IEnumerable`1 selectList, ICollection`1 currentValues, Boolean allowMultiple, Object htmlAttributes)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.SelectTagHelper.Process(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.TagHelpers.TagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.RunAsync(TagHelperExecutionContext executionContext)
+   at AspNetCoreGeneratedDocument.Areas_Company_Views_Client_AddClientBudget.<ExecuteAsync>b__92_0()
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCoreGeneratedDocument.Areas_Company_Views_Client_AddClientBudget.ExecuteAsync() in c:\Users\Lenovo\OneDrive\Desktop\sushma project code\NDISBudget\NDISBudget\Areas\Company\Views\Client\AddClientBudget.cshtml:line 5
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2024-09-04 12:52:27.761 +05:00 [INF] HTTP GET /Error responded 404 in 0.7898 ms
+2024-09-04 12:52:27.762 +05:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The exception handler configured on ExceptionHandlerOptions produced a 404 status response. This InvalidOperationException containing the original exception was thrown since this is often due to a misconfigured ExceptionHandlingPath. If the exception handler is expected to return 404 status responses then set AllowStatusCode404Response to true.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at Microsoft.AspNetCore.Mvc.Rendering.MultiSelectList.GetListItemsWithValueField()
+   at Microsoft.AspNetCore.Mvc.Rendering.MultiSelectList.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.DefaultHtmlGenerator.GenerateGroupsAndOptions(String optionLabel, IEnumerable`1 selectList, ICollection`1 currentValues)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.DefaultHtmlGenerator.GenerateSelect(ViewContext viewContext, ModelExplorer modelExplorer, String optionLabel, String expression, IEnumerable`1 selectList, ICollection`1 currentValues, Boolean allowMultiple, Object htmlAttributes)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.SelectTagHelper.Process(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.TagHelpers.TagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.RunAsync(TagHelperExecutionContext executionContext)
+   at AspNetCoreGeneratedDocument.Areas_Company_Views_Client_AddClientBudget.<ExecuteAsync>b__92_0()
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCoreGeneratedDocument.Areas_Company_Views_Client_AddClientBudget.ExecuteAsync() in c:\Users\Lenovo\OneDrive\Desktop\sushma project code\NDISBudget\NDISBudget\Areas\Company\Views\Client\AddClientBudget.cshtml:line 5
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-04 12:57:29.054 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 12:57:31.757 +05:00 [ERR] HTTP GET /Company/Client/addClientbudget responded 500 in 2707.1549 ms
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Microsoft.AspNetCore.Mvc.Rendering.MultiSelectList.GetListItemsWithValueField()
+   at Microsoft.AspNetCore.Mvc.Rendering.MultiSelectList.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.DefaultHtmlGenerator.GenerateGroupsAndOptions(String optionLabel, IEnumerable`1 selectList, ICollection`1 currentValues)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.DefaultHtmlGenerator.GenerateSelect(ViewContext viewContext, ModelExplorer modelExplorer, String optionLabel, String expression, IEnumerable`1 selectList, ICollection`1 currentValues, Boolean allowMultiple, Object htmlAttributes)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.SelectTagHelper.Process(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.TagHelpers.TagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.RunAsync(TagHelperExecutionContext executionContext)
+   at AspNetCoreGeneratedDocument.Areas_Company_Views_Client_AddClientBudget.<ExecuteAsync>b__92_0()
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCoreGeneratedDocument.Areas_Company_Views_Client_AddClientBudget.ExecuteAsync() in c:\Users\Lenovo\OneDrive\Desktop\sushma project code\NDISBudget\NDISBudget\Areas\Company\Views\Client\AddClientBudget.cshtml:line 5
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2024-09-04 12:57:31.772 +05:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Microsoft.AspNetCore.Mvc.Rendering.MultiSelectList.GetListItemsWithValueField()
+   at Microsoft.AspNetCore.Mvc.Rendering.MultiSelectList.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.DefaultHtmlGenerator.GenerateGroupsAndOptions(String optionLabel, IEnumerable`1 selectList, ICollection`1 currentValues)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.DefaultHtmlGenerator.GenerateSelect(ViewContext viewContext, ModelExplorer modelExplorer, String optionLabel, String expression, IEnumerable`1 selectList, ICollection`1 currentValues, Boolean allowMultiple, Object htmlAttributes)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.SelectTagHelper.Process(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.TagHelpers.TagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.RunAsync(TagHelperExecutionContext executionContext)
+   at AspNetCoreGeneratedDocument.Areas_Company_Views_Client_AddClientBudget.<ExecuteAsync>b__92_0()
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCoreGeneratedDocument.Areas_Company_Views_Client_AddClientBudget.ExecuteAsync() in c:\Users\Lenovo\OneDrive\Desktop\sushma project code\NDISBudget\NDISBudget\Areas\Company\Views\Client\AddClientBudget.cshtml:line 5
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2024-09-04 12:57:31.780 +05:00 [INF] HTTP GET /Error responded 404 in 1.0735 ms
+2024-09-04 12:57:31.782 +05:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The exception handler configured on ExceptionHandlerOptions produced a 404 status response. This InvalidOperationException containing the original exception was thrown since this is often due to a misconfigured ExceptionHandlingPath. If the exception handler is expected to return 404 status responses then set AllowStatusCode404Response to true.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at Microsoft.AspNetCore.Mvc.Rendering.MultiSelectList.GetListItemsWithValueField()
+   at Microsoft.AspNetCore.Mvc.Rendering.MultiSelectList.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.DefaultHtmlGenerator.GenerateGroupsAndOptions(String optionLabel, IEnumerable`1 selectList, ICollection`1 currentValues)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.DefaultHtmlGenerator.GenerateSelect(ViewContext viewContext, ModelExplorer modelExplorer, String optionLabel, String expression, IEnumerable`1 selectList, ICollection`1 currentValues, Boolean allowMultiple, Object htmlAttributes)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.SelectTagHelper.Process(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.TagHelpers.TagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.RunAsync(TagHelperExecutionContext executionContext)
+   at AspNetCoreGeneratedDocument.Areas_Company_Views_Client_AddClientBudget.<ExecuteAsync>b__92_0()
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCoreGeneratedDocument.Areas_Company_Views_Client_AddClientBudget.ExecuteAsync() in c:\Users\Lenovo\OneDrive\Desktop\sushma project code\NDISBudget\NDISBudget\Areas\Company\Views\Client\AddClientBudget.cshtml:line 5
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-04 12:58:28.660 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 12:58:31.159 +05:00 [INF] HTTP GET /Company/Client/addClientbudget responded 200 in 2500.0559 ms
+2024-09-04 12:58:31.217 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 5.1047 ms
+2024-09-04 12:58:31.320 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 2.2028 ms
+2024-09-04 12:58:31.348 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.6839 ms
+2024-09-04 13:01:37.641 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 13:01:40.142 +05:00 [INF] HTTP GET /Company/Client/addClientbudget responded 200 in 2502.1297 ms
+2024-09-04 13:01:40.170 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 3.2669 ms
+2024-09-04 13:01:40.236 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 1.7776 ms
+2024-09-04 13:01:40.268 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.4849 ms
+2024-09-04 13:03:18.819 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 13:03:21.368 +05:00 [INF] HTTP GET /Company/Client/addClientbudget responded 200 in 2550.9596 ms
+2024-09-04 13:03:21.399 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 3.1999 ms
+2024-09-04 13:03:21.456 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 2.4035 ms
+2024-09-04 13:03:21.487 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.5632 ms
+2024-09-04 13:06:28.779 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 13:06:31.308 +05:00 [INF] HTTP GET /Company/Client/addClientbudget responded 200 in 2533.2426 ms
+2024-09-04 13:06:31.383 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 5.5547 ms
+2024-09-04 13:06:31.527 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 3.8141 ms
+2024-09-04 13:06:31.554 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.6062 ms
+2024-09-04 13:06:47.274 +05:00 [INF] HTTP GET /Company/Client/addClientbudget responded 200 in 810.9527 ms
+2024-09-04 13:06:47.299 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.5346 ms
+2024-09-04 13:06:47.337 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.3425 ms
+2024-09-04 13:06:47.363 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.3781 ms
+2024-09-04 13:09:10.945 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 13:09:13.496 +05:00 [INF] HTTP GET /Company/Client/addClientbudget responded 200 in 2553.1519 ms
+2024-09-04 13:09:13.541 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 4.4194 ms
+2024-09-04 13:09:13.679 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 2.5536 ms
+2024-09-04 13:09:13.688 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.5533 ms
+2024-09-04 13:11:14.911 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 13:11:17.447 +05:00 [INF] HTTP GET /Company/Client/addClientbudget responded 200 in 2536.2877 ms
+2024-09-04 13:11:17.484 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 5.4496 ms
+2024-09-04 13:11:17.585 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 2.8278 ms
+2024-09-04 13:11:17.618 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.4742 ms
+2024-09-04 13:11:44.313 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 13:11:47.029 +05:00 [INF] HTTP GET /Company/Client/addClientbudget responded 200 in 2720.3634 ms
+2024-09-04 13:11:47.055 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 2.5984 ms
+2024-09-04 13:11:47.122 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 1.5394 ms
+2024-09-04 13:11:47.130 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.4834 ms
+2024-09-04 13:12:12.458 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 1.5472 ms
+2024-09-04 13:12:57.581 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 13:13:00.142 +05:00 [INF] HTTP GET /Company/Client/addClientbudget responded 200 in 2564.0572 ms
+2024-09-04 13:13:00.201 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 5.1078 ms
+2024-09-04 13:13:00.406 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 1.9964 ms
+2024-09-04 13:13:00.434 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.5978 ms
+2024-09-04 13:13:01.560 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 0.8829 ms
+2024-09-04 13:14:32.591 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-04 13:14:32.876 +05:00 [INF] HTTP GET /Company/Client/Budget responded 200 in 287.0041 ms
+2024-09-04 13:14:32.928 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 4.1334 ms
+2024-09-04 13:14:33.028 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 3.7675 ms
+2024-09-04 13:14:33.045 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 1.8957 ms
+2024-09-04 13:14:38.562 +05:00 [INF] HTTP GET /Company/Client/addClientbudget responded 200 in 2628.5602 ms
+2024-09-04 13:14:38.590 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.5227 ms
+2024-09-04 13:14:38.630 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.7781 ms
+2024-09-04 13:14:38.640 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.3788 ms
+2024-09-04 13:15:46.012 +05:00 [INF] HTTP GET /assets/js/chart.umd.js.map responded 404 in 3.7117 ms
+2024-09-04 13:17:10.938 +05:00 [INF] HTTP GET /Company/Client/Budget responded 200 in 6.1482 ms
+2024-09-04 13:17:10.970 +05:00 [INF] HTTP GET /assets/media/logos/logo-compact.svg responded 404 in 0.5583 ms
+2024-09-04 13:17:11.046 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.woff2 responded 404 in 0.3543 ms
+2024-09-04 13:17:11.062 +05:00 [INF] HTTP GET /assets/css/fonts/@fortawesome/fa-solid-900.ttf responded 404 in 0.6008 ms

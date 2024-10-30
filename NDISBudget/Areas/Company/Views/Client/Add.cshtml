@@ -1,0 +1,158 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model NDIS.Entities.GetAdminAddClient
+@{
+    ViewData["Title"] = "Add";
+    Layout = "~/Areas/Company/Views/Shared/_Layout.cshtml";
+}
+@* <script
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBT-dwQpbVUiSKveTA63UDsmf0yZx0F3do&libraries=places"></script> *@
+<main id="main-container">
+    <div class="content">
+        <div
+            class="d-md-flex justify-content-md-between align-items-md-center py-3 pt-md-3 pb-md-0 text-center text-md-start">
+            <div>
+                <h1 class="my-5 ms-5 fw-bold text-capitalize F_28">Client Profile</h1>
+            </div>
+        </div>
+        <div class="post fs-6 d-flex flex-column-fluid" id="kt_post">
+        <div class="container-fluid">
+            <div class="row g-5 gx-xl-10">
+                <div class="col-xxl-12 mb-md-12 mb-xl-12">
+                    <form asp-action="Add" asp-controller="Client" method="POST">
+                        <div class="row push">
+                            @Html.HiddenFor(a => a.ClientId)
+                            @Html.HiddenFor(a => a.CompanyId)
+
+                            <div class="col-lg-12 col-xl-6 mb-4">
+                                <label class="form-label" for="Firstname">First Name <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" asp-for="FirstName" id="Firstname"
+                                    name="Firstname" placeholder="Enter First Name">
+                                <span asp-validation-for="FirstName" class="text-danger"></span>
+                            </div>
+
+                            <div class="col-lg-12 col-xl-6 mb-4">
+                                <label class="form-label" for="Lastname">Last Name <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" asp-for="LastName" id="Lastname" name="Lastname"
+                                    placeholder="Enter Last Name">
+                                <span asp-validation-for="LastName" class="text-danger"></span>
+                            </div>
+
+                            <div class="col-lg-12 col-xl-6 mb-4">
+                                <label class="form-label" for="DateOfBirth">DOB</label>
+                                <input type="date" asp-for="DateOfBirth" class="form-control" id="DateOfBirth"
+                                    name="DateOfBirth" placeholder="DOB">
+                            </div>
+
+                            <div class="col-lg-12 col-xl-6 mb-4">
+                                <label class="form-label" for="GenderId">Gender</label>
+                                <select class="form-select" asp-for="GenderId" id="GenderId" name="GenderId">
+                                    <option value="1">Male</option>
+                                    <option value="2">Female</option>
+                                    <option value="3">Others</option>
+                                </select>
+                            </div>
+
+                            <div class="col-lg-12 col-xl-6 mb-4">
+                                <label class="form-label" for="MobileNumber">Mobile <span
+                                        class="text-danger">*</span></label>
+                                <input type="number" maxlength="10" asp-for="MobileNumber" class="form-control"
+                                    id="MobileNumber" name="MobileNumber" placeholder="Mobile">
+                                <span asp-validation-for="MobileNumber" class="text-danger"></span>
+                            </div>
+
+                            <div class="col-lg-12 col-xl-6 mb-4">
+                                <label class="form-label" for="EmailId">Email</label>
+                                <input type="email" asp-for="EmailId" class="form-control" id="EmailId" name="EmailId"
+                                    placeholder="Email">
+                            </div>
+
+                            <div class="col-lg-12 col-xl-6 mb-4">
+                                <label class="form-label" for="ClientAddress">Address</label>
+                                <input class="form-control" asp-for="ClientAddress" id="ClientAddress"
+                                    name="ClientAddress" rows="4" placeholder="Client Address.."
+                                    spellcheck="false"></input>
+                            </div>
+
+                            <div class="col-lg-12 col-xl-6 mb-4">
+                                <label class="form-label" for="IsActive">Status</label>
+                                <select class="form-select" asp-for="IsActive" id="IsActive" name="IsActive">
+                                    <option value="1">Active</option>
+                                    <option value="0">Inactive</option>
+                                </select>
+                            </div>
+
+                            <div class="col-lg-12 col-xl-6 mb-4 d-none">
+                                <div class="block-header block-header-default mb-4">
+                                    <h3 class="block-title">Support Coordinator</h3>
+                                </div>
+                                <div class="mb-4">
+                                    <label class="form-label" for="SupportCoordinator">Name</label>
+                                    <input type="text" asp-for="SupportCoordinator" class="form-control"
+                                        id="SupportCoordinator" name="SupportCoordinator"
+                                        placeholder="Support Coordinator Name">
+                                </div>
+                                <div class="mb-4">
+                                    <label class="form-label" for="SCCompany">Company</label>
+                                    <input type="text" asp-for="SCCompany" class="form-control" id="SCCompany"
+                                        name="SCCompany" placeholder="Company">
+                                </div>
+                                <div class="mb-4">
+                                    <label class="form-label" for="SCPhone">Phone</label>
+                                    <input type="text" asp-for="SCPhone" class="form-control" id="SCPhone"
+                                        name="SCPhone" placeholder="Phone">
+                                </div>
+                                <div class="mb-4">
+                                    <label class="form-label" for="SCEmail">Email</label>
+                                    <input type="email" asp-for="SCEmail" class="form-control" id="SCEmail"
+                                        name="SCEmail" placeholder="Email">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-xl-6 mb-4 d-none">
+                                <div class="block-header block-header-default mb-4">
+                                    <h3 class="block-title">Plan Manager</h3>
+                                </div>
+                                <div class="mb-4">
+                                    <label class="form-label" for="PlanManager">Name</label>
+                                    <input type="text" asp-for="PlanManager" class="form-control" id="PlanManager"
+                                        name="PlanManager" placeholder="Plan Manager Name">
+                                </div>
+                                <div class="mb-4">
+                                    <label class="form-label" for="PMPhone">Phone</label>
+                                    <input type="text" asp-for="PMPhone" class="form-control" id="PMPhone"
+                                        name="PMPhone" placeholder="Phone">
+                                </div>
+                                <div class="mb-4">
+                                    <label class="form-label" for="PMEmail">Email</label>
+                                    <input type="email" asp-for="PMEmail" class="form-control" id="PMEmail"
+                                        name="PMEmail" placeholder="Email">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 d-flex justify-content-end mt-4">
+                                <button type="submit" id="savebtn" class="btn btn-outline-primary me-2">Save</button>
+                                <a href="/company/client/index" id="cnlbtn" class="btn btn-outline-warning">Cancel</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+     </div>
+</main>
+
+<script>
+    // function initAutocomplete() {
+    //     var input = document.getElementById('ClientAddress');
+    //     var autocomplete = new google.maps.places.Autocomplete(input);
+    // }
+    if (@ViewBag.message!= '') {
+        alert(@ViewBag.message)
+    }
+</script>
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBT-dwQpbVUiSKveTA63UDsmf0yZx0F3do&libraries=places&callback=initAutocomplete"
+    async defer></script>

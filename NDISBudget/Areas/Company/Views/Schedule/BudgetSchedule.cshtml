@@ -1,0 +1,331 @@
+﻿@model NDIS.Entities.GetBudgetSchedule
+
+@{
+    ViewData["Title"] = "BudgetSchedule";
+    Layout = "~/Areas/Company/Views/Shared/_Layout.cshtml";
+}
+
+
+<main id="main-container">
+    <div class="content">
+        <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center">
+            <h1 class="my-5 ms-5 fw-bold text-capitalize F_28">Budget Schedule</h1>
+            <nav class="flex-shrink-0 my-2 my-sm-0 ms-sm-3" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                </ol>
+            </nav>
+        </div>
+        <div class="block-content">
+            <div class="block block-rounded">
+                <div class="block-header block-header-default">
+
+                    <div class="col-sm-12 col-md-3">
+                        <label class="form-label" for="example-text-input">Participant <span
+                                class="text-danger">*</span></label>
+                        <select id="ClientId" name="ClientId" asp-for="ClientId" class="form-control">
+                            @foreach (var i in @Model.Clients)
+                            {
+                                <option value="@i.ClientId">@i.FirstName</option>
+                            }
+                        </select>
+                        <span asp-validation-for="ClientId" class="text-danger"></span>
+                    </div>
+                    <div class="col-sm-12 col-md-3">
+                        <label class="form-label" for="example-text-input">Budget <span
+                                class="text-danger">*</span></label>
+                        <select id="ClientBudgetId" name="ClientBudgetId" asp-for="ClientBudgetId" class="form-control">
+                            <option value="0">Select Budget</option>
+                        </select>
+                        <span asp-validation-for="ClientBudgetId" class="text-danger"></span>
+                    </div>
+
+                    <div class="col-sm-12 col-md-2">
+                        <label class="form-label" for="example-text-input"></label>
+                        <button type="button" id="shwbtn" class="btn btn-primary ">Show</button>
+                        @* <button type="button" id="shwallbtn" class="btn btn-primary ">Show all</button>
+                        <button type="button" id="addentitry" class="btn btn-primary ">Add</button> *@
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="block-content">
+            <div class="block block-rounded">
+                <div class="block-header block-header-default" style="display:none;">
+                    <div class="col-sm-12 col-md-6">
+                        @* <label class="form-label" for="example-text-input">Search</label> *@
+                        <input type="text" class="form-control Searchstr" id="SearchStr" name="SearchStr"
+                            placeholder="Search">
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <label class="form-label" for="example-text-input"></label>
+                        <button type="button" id="shwbtn" class="btn btn-primary ">Search</button>
+                        <button type="button" id="shwallbtn" class="btn btn-primary ">Show all</button>
+
+                        @* <button type="button" id="addentitry" data-cid="@Model.ClientBudgetId" class="btn btn-primary
+                        ">Add</button> *@
+
+                    </div>
+                </div>
+                <div class="content content-full">
+                    <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center">
+                        <div class="col-sm-6 pull-right">
+
+                            <div class=" col-md-6 pull-right">
+                                <label class="form-label" for="example-text-input">Funding : </label><b><label
+                                        id="FundingStr" name="FundingStr"></label></b>
+                            </div>
+                            <div class=" col-md-6 pull-right">
+                                <label class="form-label" for="example-text-input">Sum Of Services : </label><b><label
+                                        id="SumOfSurvicesStr" name="SumOfSurvicesStr"></label></b>
+                            </div>
+                            <div class=" col-md-6 pull-right">
+                                <label class="form-label" for="example-text-input">SurPlus : </label><b><label
+                                        id="SurPlusStr" name="SurPlusStr"></label></b>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 pull-right">
+                            <div class=" col-md-6 pull-right">
+                                <label class="form-label" for="example-text-input">First Visit : </label><b><label
+                                        id="FirstVisitDateStr" name="FirstVisitDateStr"></label></b>
+                            </div>
+                            <div class=" col-md-6 pull-right">
+                                <label class="form-label" for="example-text-input">Last Visit : </label><b><label
+                                        id="LastVisitDateStr" name="LastVisitDateStr"></label></b>
+                            </div>
+                            <div class=" col-md-6 pull-right">
+                                <label class="form-label" for="example-text-input">Total Visits : </label><b><label
+                                        id="TotalVisits" name="TotalVisits"></label></b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="display:none;">
+                    <div class="col-sm-12 col-md-4 pull-right">
+                        Total: <span id="totalrec"></span>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                        <div id="showpageinfo" class="col-auto">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4 pull-left">
+                        <select class="form-select" id="ddlpagesize">
+                            <option>25</option>
+                            <option>50</option>
+                            <option>75</option>
+                            <option>100</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="block-content block-content-full">
+                    <div id="DataTables_Table_3_wrapper" class="dataTables_wrapper dt-bootstrap5 no-footer">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <table class="table clientsDatatable" id="tbldata1"
+                                    aria-describedby="DataTables_Table_3_info">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                Date
+                                            </th>
+
+                                            <th>
+                                                DayofWeek
+                                            </th>
+                                            <th>
+                                                Item No
+                                            </th>
+                                            <th>
+                                                Item Name
+                                            </th>
+                                            <th>
+                                                Shift Start
+                                            </th>
+                                            <th>
+                                                Shift End
+                                            </th>
+                                            <th>
+                                                Total Hours
+                                            </th>
+                                            <th>
+                                                Rate
+                                            </th>
+                                            <th>
+                                                Charge
+                                            </th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody id="tbldata">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row" style="display:none;">
+                            <div class="px-2 my-2 pull-right">
+                                <ul class="pagination m-0">
+                                    <li class="active"><a href="#"><i class="fas fa-angle-double-left"></i></a></li>
+                                    <li><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#"><i class="fas fa-angle-double-right"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</main>
+@* <button type="button" class="btn btn-alt-primary push" data-bs-toggle="modal"
+data-bs-target="#modal-block-select2">Launch Modal</button> *@
+<div class="modal" id="modal-block-select2" tabindex="-1" aria-labelledby="modal-block-select2" style="display:none;"
+    aria-modal="true" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="block block-rounded block-transparent mb-0">
+                <div class="block-header block-header-default">
+                    <h3 class="block-title">Select2 in a modal</h3>
+                    <div class="block-options">
+                        <button type="button" class="btn-block-option" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="fa fa-fw fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="block-content">
+                    <div class="row push">
+                        <div class="col-lg-12 col-xl-6">
+
+
+                            <div class="mb-4">
+                                <label class="form-label" for="example-email-input">Start Date <span
+                                        class="text-danger">*</span></label>
+                                <input type="date" asp-for="StartDate" class="form-control" id="StartDate"
+                                    name="StartDate" placeholder="StartDate">
+                                <span asp-validation-for="StartDate" class="text-danger"></span>
+                            </div>
+                            @* <div class="mb-4">
+                            <label class="form-label" for="example-email-input">Shift Start Time <span
+                            class="text-danger">*</span></label>
+                            <input type="time" asp-for="ShiftStartTime" class="form-control" id="ShiftStartTime"
+                            name="ShiftStartTime" placeholder="StartDate">
+                            <span asp-validation-for="ShiftStartTime" class="text-danger"></span>
+                            </div> *@
+                            <div class="mb-4">
+                                <label class="form-label" for="example-text-input">Frequency </label>
+                                <select class="form-select" id="scheduledFrequencies" name="scheduledFrequencies">
+                                    @foreach (var i in @Model.scheduledFrequencies)
+                                    {
+                                        <option value="@i.ScheduledFrequencyId">@i.ScheduledFrequency</option>
+                                    }
+                                </select>
+                                <span asp-validation-for="FrequencyId" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-xl-6">
+
+                            <div class="mb-4">
+                                <label class="form-label" for="example-email-input">End Date <span
+                                        class="text-danger">*</span></label>
+                                <input type="date" asp-for="EndDate" class="form-control" id="EndDate" name="EndDate"
+                                    placeholder="EndDate">
+                                <span asp-validation-for="EndDate" class="text-danger"></span>
+                            </div>
+                            @* <div class="mb-4">
+                            <label class="form-label" for="example-email-input">Shift End Time <span
+                            class="text-danger">*</span></label>
+                            <input type="time" asp-for="ShiftEndTime" class="form-control" id="ShiftEndTime"
+                            name="ShiftEndTime" placeholder="StartDate">
+                            <span asp-validation-for="ShiftEndTime" class="text-danger"></span>
+                            </div> *@
+                            <div class="mb-4">
+                                <label class="form-label" for="example-text-input">WeekDay </label>
+                                <select id="WeekArray" name="WeekArray" multiple asp-for="WeekArray"
+                                    class="form-control" style="height: 170px;">
+                                    <option value="1">Monday</option>
+                                    <option value="2">Tuesday</option>
+                                    <option value="3">Wednesday</option>
+                                    <option value="4">Thursday</option>
+                                    <option value="5">Friday</option>
+                                    <option value="6">Saturday</option>
+                                    <option value="7">Sunday</option>
+                                </select>
+                                <span asp-validation-for="WeekDayIds" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="block-content block-content-full text-end bg-body">
+                    <button type="button" class="btn btn-sm btn-alt-secondary me-1"
+                        data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-sm btn-primary" id="btnsave">Perfect</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(() => {
+
+        $(document).on('change', '#ClientId', function (event) {
+            BindClientBudget();
+        });
+
+        $(document).on('click', '#shwbtn', function (event) {
+            BindClientBudgetSummary();
+
+        });
+        function BindClientBudgetSummary() {
+            var id = $("#ClientBudgetId").val();
+            gl.ajaxreqloader(apiurl + "Client/GetClientBudgetSummary", "GET", { id: id }, function (response) {
+
+                if (response != null) {
+                    console.log(response.surPlusStr);
+                    $('#SurPlusStr').html(response.surPlusStr);
+                    $('#FundingStr').html(response.fundingStr);
+                    $('#SumOfSurvicesStr').html(response.sumOfSurvicesStr);
+                    $('#FirstVisitDateStr').html(response.firstVisitDateStr);
+                    $('#LastVisitDateStr').html(response.lastVisitDateStr);
+                    $('#TotalVisits').html(response.totalVisits);
+                    if (response.totalVisits > 0)
+                        getSupportItem()
+                }
+            });
+        }
+        //alert(1)
+        function BindClientBudget() {
+            var id = $("#ClientId").val();
+            gl.ajaxreqloader(apiurl + "Client/GetddlClientBudgetById", "GET", { id: id }, function (response) {
+                console.log(response)
+                $('#ClientBudgetId').empty();
+                if (response.length > 0) {
+                    $('#ClientBudgetId').append($('<option>', {
+                        value: 0,
+                        text: "Select Client Budget."
+                    }));
+                    $.each(response, function (i, item) {
+
+                        $('#ClientBudgetId').append($('<option>', {
+                            value: item.clientBudgetId,
+                            text: item.ndisRefno + '-- $' + item.proposedBudget
+                        }));
+                    });
+                }
+                else {
+                    $('#ClientBudgetId').append($('<option>', {
+                        value: 0,
+                        text: "No Client Budgets"
+                    }));
+                }
+            });
+        }
+    });
+</script>
+
+<script src="~/js/BudgetSchedule.js"></script>

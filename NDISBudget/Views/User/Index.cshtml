@@ -1,0 +1,158 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model NDIS.Entities.AdminAddCompany
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <title>NDIS</title>
+
+    <meta name="description" content="NDIS">
+    <meta name="author" content="pixelcave">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Open Graph Meta -->
+    <meta property="og:title" content="NDIS">
+    <meta property="og:site_name" content="Dashmix">
+    <meta property="og:description" content="NDIS">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <link rel="shortcut icon" href="~/assets/media/favicons/favicon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="~/assets/media/favicons/favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="~/assets/media/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/media/favicons/apple-touch-icon-180x180.png">
+
+    <link rel="stylesheet" id="css-main" href="~/assets/css/dashmix.min.css">
+    <script src="~/assets/js/lib/jquery.min.js"></script>
+    <script src="~/js/global.js"></script>
+</head>
+
+<body>
+    <div id="page-container" >
+       
+        <!-- END Sidebar -->
+        <main id="main-container">
+
+            <div class="content">
+                <div class="block block-rounded">
+                    <div class="block-header block-header-default">
+                        <h3 class="block-title">Register Company</h3>
+                    </div>
+                    <div class="block-content">
+                        <form asp-action="Index" asp-controller="User" method="POST">
+                            <label class="text-danger">@ViewBag.Message</label>
+                            <div class="row push">
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="mb-4">
+                                        <label class="form-label" for="example-text-input">Company Name <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" asp-for="CompanyName" id="CompanyName" name="CompanyName" placeholder="Enter Company Name">
+                                        <span asp-validation-for="CompanyName" class="text-danger"></span>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label class="form-label" for="example-email-input">Contact Number <span class="text-danger">*</span></label>
+                                        <input type="number" asp-for="ContactNumber" class="form-control" id="ContactNumber" name="ContactNumber" placeholder="Contact Number">
+                                        <span asp-validation-for="ContactNumber" class="text-danger"></span>
+
+                                    </div>
+                                    <div class="mb-4">
+                                        <label class="form-label" for="example-email-input">UserName</label>
+                                        <input type="text" asp-for="UserName" class="form-control" id="UserName" name="UserName" placeholder="UserName">
+                                        <span asp-validation-for="UserName" class="text-danger"></span>
+
+                                    </div>
+                                    <div class="mb-4">
+                                        <label class="form-label" for="example-textarea-input">Address</label>
+                                        <textarea class="form-control" asp-for="Address" id="Address" name="Address" rows="4" placeholder="Client Address.." spellcheck="false"></textarea>
+                                        <sider-quick-compose-btn data-gpts-theme="light"></sider-quick-compose-btn>
+                                    </div>
+                                    </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="mb-4">
+                                        <label class="form-label" for="val-skill">Company Type <span class="text-danger">*</span></label>
+                                        <select class="form-select" asp-for="CompanyTypeId" id="CompanyTypeId" name="CompanyTypeId" asp-items="@(new SelectList(Model.CompanyTypes,"CompanyTypeId","CompanyType"))">
+                                        </select>
+                                        <span asp-validation-for="CompanyTypeId" class="text-danger"></span>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label class="form-label" for="example-email-input">Email</label>
+                                        <input type="email" asp-for="EmailId" class="form-control" id="EmailId" name="EmailId" placeholder="Emai Input">
+                                    </div>
+                                    <div class="mb-4">
+                                        <label class="form-label" for="example-email-input">Password</label>
+                                        <input type="text" asp-for="Password" class="form-control" id="Password" name="Password" placeholder="Password">
+                                        <span asp-validation-for="Password" class="text-danger"></span>
+
+                                    </div>
+                                    <div class="mb-4">
+                                        <br />
+                                        <br />
+                                        <br />
+                                        <br />
+                                        <button type="submit" id="savebtn" class="btn btn-primary ">Save</button>
+                                        <button type="button" href="/admin/client/index" id="cnlbtn" class="btn btn-warning">Cancel</button>
+                                    </div>
+                                    </div>
+                                   
+
+
+
+
+                                   
+                                   
+
+                                   
+
+                                   
+
+                                   
+
+
+                                   
+                                   
+                                </div>
+                            
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer id="page-footer" class="bg-body-light">
+            <div class="content py-0">
+                <div class="row fs-sm">
+                </div>
+            </div>
+        </footer>
+        <!-- END Footer -->
+    </div>
+    <!-- END Page Container -->
+    <!--
+      Dashmix JS
+
+      Core libraries and functionality
+      webpack is putting everything together at assets/_js/main/app.js
+    -->
+    <!-- Page JS Plugins -->
+    <script src="~/assets/js/plugins/chart.js/chart.min.js"></script>
+
+    <!-- Page JS Code -->
+    @* <script src="~/assets/js/lib/jquery.min.js"></script> *@
+    <script src="~/assets/js/dashmix.app.min.js"></script>
+
+
+
+
+</body>
+</html>
